@@ -16,11 +16,11 @@ import (
 	"WorkShop/http_handle"
 	"WorkShop/task"
 	"WorkShop/problem"
+	"WorkShop/routine"
 
 	"fmt"
 	"os"
 )
-
 
 func main() {
 	if len(os.Args) < 2 {
@@ -29,6 +29,11 @@ func main() {
 	}
 
 	inputString := os.Args[1]
+
+	if inputString == "routine" || inputString ==  "routine/" {
+		routine.RoutineMain()
+		return
+	}
 
 	if inputString == "leetcode" || inputString ==  "leetcode/" {
 		leetcode.LeetcodeExecute()
