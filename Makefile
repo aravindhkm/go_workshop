@@ -18,26 +18,3 @@ push: commit
 
 # Default target: run all steps (add, commit, push)
 all: push
-
-# Mark 'test' as a phony target, so make will always execute it
-.PHONY: test
-test:
-	npx hardhat test
-
-.PHONY: call
-call:
-	npx hardhat run scripts/contractCall.ts --network bscTestnet
-
-.PHONY: id
-id:
-	npx hardhat run scripts/userId.ts --network bscTestnet
-
-# Mark 'cto' as a phony target, so make will always execute it
-.PHONY: cto
-cto:
-	clear && npx hardhat test test/cto.ts
-
-# Mark 'deploy' as a phony target, so make will always execute it
-.PHONY: deploy
-deploy:
-	npx hardhat run scripts/deploy.ts --network bscTestnet
