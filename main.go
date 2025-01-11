@@ -17,6 +17,7 @@ import (
 	"WorkShop/task"
 	"WorkShop/problem"
 	"WorkShop/routine"
+	"WorkShop/interview"
 
 	"fmt"
 	"os"
@@ -29,6 +30,11 @@ func main() {
 	}
 
 	inputString := os.Args[1]
+
+	if inputString == "interview" || inputString ==  "interview/" {
+		interview.InterviewMain()
+		return
+	}
 
 	if inputString == "routine" || inputString ==  "routine/" {
 		routine.RoutineMain()
