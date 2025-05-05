@@ -18,3 +18,5 @@ push: commit
 
 # Default target: run all steps (add, commit, push)
 all: push
+
+
