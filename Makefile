@@ -1,5 +1,5 @@
 # Define the commit message (this can be passed as a variable)
-COMMIT_MSG = "Update changes"
+COMMIT_MSG = "Handle missing function name argument and default to empty string"
 
 # Define the current branch
 CURRENT_BRANCH = $(shell git rev-parse --abbrev-ref HEAD)

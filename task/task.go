@@ -1,6 +1,6 @@
 package task
 
-func TaskExecute() {
+func Run(funcName string) {
 	// RemoveZeroFromArray()
 	// FindMissingNumberInUnsortedArray()
 	// InventoryExecute()

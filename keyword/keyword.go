@@ -1,6 +1,6 @@
 package keyword
 
-func KeywordExecute() {
+func Run(funcName string) {
 	// IotaExampleOne()
 	// SliceTest()
 	// ArrayTest()

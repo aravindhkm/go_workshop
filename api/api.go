@@ -1,6 +1,6 @@
 package api
 
-func ApiExecute() {
+func Run(funcName string) {
 	// GinExampleOne()
 	GinExampleTwo()
 }

@@ -1,23 +1,22 @@
 package loop
 
 import (
-	"fmt"
-    "WorkShop/loop/switchcase"
 	"WorkShop/loop/selectcase"
-
+	"WorkShop/loop/switchcase"
+	"fmt"
 )
 
 const context = "switchcase"
 
-func LoopExecute() {
-	
-	if context == "selectcase"{
+func Run(funcName string) {
+
+	if context == "selectcase" {
 		selectcase.SelectCaseExecute()
 	}
 
-	if context == "switchcase"{
+	if context == "switchcase" {
 		switchcase.SwitchExecute()
 	}
-	
+
 	fmt.Println("")
 }

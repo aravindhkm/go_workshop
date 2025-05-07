@@ -1,5 +1,5 @@
 package error
 
-func ErrorExecute() {
+func Run(funcName string) {
 	SimpleErrorHandle()
 }

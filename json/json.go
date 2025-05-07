@@ -1,6 +1,6 @@
 package json
 
-func JsonExecute() {
+func Run(funcName string) {
 	// ReadJsonFile()
 	ReadJsonFileTwo()
 	// WriteJsonExampleOne()

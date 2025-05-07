@@ -1,15 +1,15 @@
 package leetcode
 
 import (
-	"WorkShop/leetcode/linkedlist"  // linkedlist
-	"WorkShop/leetcode/sorting-and-searching"  // sortingandsearching
-	"WorkShop/leetcode/bufio"  // bufio
-	"WorkShop/leetcode/shuffle_array"  // bufio
+	"WorkShop/leetcode/bufio"                                     // bufio
+	"WorkShop/leetcode/linkedlist"                                // linkedlist
+	shufflearray "WorkShop/leetcode/shuffle_array"                // bufio
+	sortingandsearching "WorkShop/leetcode/sorting-and-searching" // sortingandsearching
 )
 
 var exec string = "shufflearray"
 
-func LeetcodeExecute() {
+func Run(funcName string) {
 	if exec == "sortingandsearching" {
 		sortingandsearching.SortingAndSearchingExecute()
 	}

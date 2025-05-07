@@ -1,7 +1,6 @@
 package concurrency
 
-
-func ConcurrencyExecute() {
+func Run(funcName string) {
 	// ChannelDirection()
 	// BufferChannelOne()
 	// BufferChannelTwo()

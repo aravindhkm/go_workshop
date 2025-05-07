@@ -1,7 +1,6 @@
 package interview
 
-
-func InterviewMain() {
+func Run(funcName string) {
 	SecondLargetNumberOne()
 	FindPairSumsOne()
 }

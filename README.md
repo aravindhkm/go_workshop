@@ -8,9 +8,8 @@ The `main.go` file is the entry point of the application, and you can run specif
 
 ## How to Use
 
-### Running Examples
 
 To run an example, you need to pass the desired module name as an argument when running the `main.go` file.
 
 ```bash
-go run main.go <module_name>
+go run main.go <module_name> <func_name_as_number>

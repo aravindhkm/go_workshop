@@ -1,6 +1,6 @@
 package sort
 
-func SortExecute() {
+func Run(funcName string) {
 	// MapStringSort()
 	StringDuplicateSort()
 }

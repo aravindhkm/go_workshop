@@ -23,7 +23,7 @@ func runeExampleOne() {
 	fmt.Println("result", string(outputStr))
 }
 
-func RuneExecute() {
-	runeExampleOne()
-	// fmt.Println(reverseString("Hello_World_Golang"))
-}
+// func Run(funcName string)eExecute() {
+// 	runeExampleOne()
+// 	// fmt.Println(reverseString("Hello_World_Golang"))
+// }

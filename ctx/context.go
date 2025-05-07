@@ -1,6 +1,6 @@
 package ctx
 
-func ContextExecute() {
+func Run(funcName string) {
 	// CtxWithValueExampleOne()
 	Diff()
 }

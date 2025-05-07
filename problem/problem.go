@@ -1,13 +1,13 @@
 package problem
 
 import (
-	"WorkShop/problem/array_string"
+	arraystring "WorkShop/problem/array_string"
 	"WorkShop/problem/linkedlist"
 )
 
 var execute string = "linkedlist"
 
-func ProblemExecute() {
+func Run(funcName string) {
 	if execute == "array_string" {
 		arraystring.ArrayManipulationMain()
 	}

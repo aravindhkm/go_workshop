@@ -1,7 +1,6 @@
 package httphandle
 
-
-func HttpMain() {
+func Run(funcName string) {
 	// HttpPostExampleOne()
 	HttpPostExampleTwo()
 }

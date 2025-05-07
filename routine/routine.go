@@ -1,6 +1,6 @@
 package routine
 
-func RoutineMain() {
+func Run(funcName string) {
 	SequenceMain()
 	PingPong()
 }
