@@ -1,3 +1,0 @@
-package sequence
-
-func OddEven

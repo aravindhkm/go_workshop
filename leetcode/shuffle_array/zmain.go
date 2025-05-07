@@ -1,10 +1,9 @@
-package routine
+package shufflearray
 
 import "fmt"
 
 var funcNames = []func(){
-	SequenceMain,
-	PingPong,
+	ShuffleExampleOne,
 }
 
 // Run executes a function by key from the store

@@ -13,7 +13,7 @@ func (*Writer) Write(p []byte) (n int, err error) {
 	return len(p), nil
 }
 
-func BufioExecute() {
+func BufioExecuteOne() {
 	// declare a buffered writer
 	// with buffer size 4
 	w := new(Writer)

@@ -1,10 +1,12 @@
-package routine
+package arraystring
 
 import "fmt"
 
 var funcNames = []func(){
-	SequenceMain,
-	PingPong,
+	MergeMeetingsMain,
+	MergeSortedArraysTest,
+	ReverseString,
+	ReverseWord,
 }
 
 // Run executes a function by key from the store

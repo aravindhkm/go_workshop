@@ -1,10 +1,11 @@
-package routine
+package bufio
 
-import "fmt"
+import (
+	"fmt"
+)
 
 var funcNames = []func(){
-	SequenceMain,
-	PingPong,
+	BufioExecuteOne,
 }
 
 // Run executes a function by key from the store

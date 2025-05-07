@@ -1,10 +1,14 @@
-package routine
+package switchcase
 
 import "fmt"
 
 var funcNames = []func(){
-	SequenceMain,
-	PingPong,
+	ExampleOne,
+	ExampleTwo,
+	ExampleThree,
+	ExampleFour,
+	ExampleFive,
+	ExampleSix,
 }
 
 // Run executes a function by key from the store

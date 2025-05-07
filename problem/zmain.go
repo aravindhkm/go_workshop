@@ -5,37 +5,20 @@ import (
 	"WorkShop/problem/linkedlist"
 )
 
-var execute string = "linkedlist"
-
-func Run(funcName string) {
-	if execute == "array_string" {
-		arraystring.ArrayManipulationMain()
-	}
-
-	if execute == "linkedlist" {
-		linkedlist.LinkedListMain()
-	}
+var floderName = map[string]func(string){
+	"array_string": arraystring.Run,
+	"linkedlist": linkedlist.Run,
 }
 
-import "fmt"
-
-var funcNames = []func(){
-	SimpleErrorHandle,
-}
+var execFloder string = "shufflearray"
 
 // Run executes a function by key from the store
-func Run(funcName string) {
-	var funcStore = map[string]func(){}
-
-	// Populate the map with function names as keys
-	for index, fn := range funcNames {
-		funcStore[fmt.Sprintf("%d", index+1)] = fn
-	}
-	if fn, exists := funcStore[funcName]; exists {
-		fn()
+func Run(funcName string) {	
+	if fn, exists := floderName[execFloder]; exists {
+		fn(funcName)
 		return
 	} else {
-		funcStore["1"]()
+		floderName[execFloder](funcName)
 		return
 	}
 }

@@ -1,10 +1,10 @@
-package routine
+package sortingandsearching
 
 import "fmt"
 
 var funcNames = []func(){
-	SequenceMain,
-	PingPong,
+	SortingAndSearchingExecuteOwn,
+	SortingAndSearchingExecuteBinary,
 }
 
 // Run executes a function by key from the store

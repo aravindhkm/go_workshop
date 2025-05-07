@@ -1,10 +1,9 @@
-package routine
+package linkedlist
 
 import "fmt"
 
 var funcNames = []func(){
-	SequenceMain,
-	PingPong,
+	DeleteNodeMain,
 }
 
 // Run executes a function by key from the store

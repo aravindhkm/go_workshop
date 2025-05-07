@@ -29,7 +29,7 @@ func (s *Node) Print() {
 	}
 }
 
-func LinkedListExecute() {
+func LinkedListExecuteOne() {
 	var data *Node
 
 	data.Add(1)

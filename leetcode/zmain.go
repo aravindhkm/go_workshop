@@ -7,45 +7,24 @@ import (
 	sortingandsearching "WorkShop/leetcode/sorting-and-searching" // sortingandsearching
 )
 
-var exec string = "shufflearray"
-
-func Run(funcName string) {
-	if exec == "sortingandsearching" {
-		sortingandsearching.SortingAndSearchingExecute()
-	}
-
-	if exec == "linkedlist" {
-		linkedlist.LinkedListExecute()
-	}
-
-	if exec == "bufio" {
-		bufio.BufioExecute()
-	}
-
-	if exec == "shufflearray" {
-		shufflearray.ShuffleArrayMain()
-	}
+var floderName = map[string]func(string){
+	"sortingandsearching": sortingandsearching.Run,
+	"linkedlist": linkedlist.Run,
+	"bufio": bufio.Run,
+	"shufflearray": shufflearray.Run,
 }
 
-import "fmt"
-
-var funcNames = []func(){
-	SimpleErrorHandle,
-}
+var execFloder string = "shufflearray"
 
 // Run executes a function by key from the store
 func Run(funcName string) {
-	var funcStore = map[string]func(){}
-
-	// Populate the map with function names as keys
-	for index, fn := range funcNames {
-		funcStore[fmt.Sprintf("%d", index+1)] = fn
-	}
-	if fn, exists := funcStore[funcName]; exists {
-		fn()
+	if fn, exists := floderName[execFloder]; exists {
+		fn(funcName)
 		return
 	} else {
-		funcStore["1"]()
+		floderName[execFloder](funcName)
 		return
 	}
 }
+
+
