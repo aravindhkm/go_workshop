@@ -2,12 +2,23 @@ package mapping
 
 import "fmt"
 
-type Store string
-
-func (d *Store) PrintStr(a string) string {
-	return fmt.Sprintf("%s : %s", *d, a)
+var funcNames = []func(){
+	// SimpleErrorHandle,
 }
 
+// Run executes a function by key from the store
 func Run(funcName string) {
+	var funcStore = map[string]func(){}
 
+	// Populate the map with function names as keys
+	for index, fn := range funcNames {
+		funcStore[fmt.Sprintf("%d", index+1)] = fn
+	}
+	if fn, exists := funcStore[funcName]; exists {
+		fn()
+		return
+	} else {
+		funcStore["1"]()
+		return
+	}
 }

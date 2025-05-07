@@ -1,16 +1,35 @@
 package keyword
 
+import "fmt"
+
+var funcNames = []func(){
+	ReferenceOrValue,
+	ArrayTest,
+	CopyKeyword,
+	DeferExecute,
+	IotaExampleOne,
+	RecoverExampleOne,
+	RuneExampleOne,
+	SliceAndCap,
+	SliceTest,
+	StringImmutable,
+	StructExampleOne,
+	SwapTwoNumberExecute,
+}
+
+// Run executes a function by key from the store
 func Run(funcName string) {
-	// IotaExampleOne()
-	// SliceTest()
-	// ArrayTest()
-	// SliceAndCap()
-	// RecoverExampleOne()
-	// DeferExecute()
-	// StringImmutable()
-	// RuneExecute()
-	// SwapTwoNumberExecute()
-	// ReferenceOrValue()
-	// StructExampleOne()
-	CopyKeyword()
+	var funcStore = map[string]func(){}
+
+	// Populate the map with function names as keys
+	for index, fn := range funcNames {
+		funcStore[fmt.Sprintf("%d", index+1)] = fn
+	}
+	if fn, exists := funcStore[funcName]; exists {
+		fn()
+		return
+	} else {
+		funcStore["1"]()
+		return
+	}
 }

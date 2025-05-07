@@ -21,7 +21,7 @@ func selectExample(out chan int, quit chan bool) {
 	}
 }
 
-func FibonacciExample() {
+func SelectFibonacciExample() {
 	data := make(chan int)
 	quit := make(chan bool)
 

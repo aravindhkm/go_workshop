@@ -1,14 +1,20 @@
 package httphandle
 
+import "fmt"
 
-// Store function mappings
-var funcStore = map[string]func(){
-	"1": HttpPostExampleOne,
-	"2": HttpPostExampleTwo,
+var funcNames = []func(){
+	HttpPostExampleOne,
+	HttpPostExampleTwo,
 }
 
 // Run executes a function by key from the store
 func Run(funcName string) {
+	var funcStore = map[string]func(){}
+
+	// Populate the map with function names as keys
+	for index, fn := range funcNames {
+		funcStore[fmt.Sprintf("%d", index+1)] = fn
+	}
 	if fn, exists := funcStore[funcName]; exists {
 		fn()
 		return

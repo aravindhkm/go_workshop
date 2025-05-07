@@ -10,7 +10,7 @@ func reverseString(s string) string {
 	return string(runes)
 }
 
-func runeExampleOne() {
+func RuneExampleOne() {
 	str := "Hello_World_Golang"
 
 	runeStr := []rune(str)
@@ -22,8 +22,3 @@ func runeExampleOne() {
 
 	fmt.Println("result", string(outputStr))
 }
-
-// func Run(funcName string)eExecute() {
-// 	runeExampleOne()
-// 	// fmt.Println(reverseString("Hello_World_Golang"))
-// }
