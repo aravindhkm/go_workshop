@@ -3,6 +3,7 @@ package workout
 import "fmt"
 
 var funcNames = []func(){
+	DummyWorkOut,
 	RaceCondition,
 }
 

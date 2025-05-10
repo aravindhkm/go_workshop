@@ -7,6 +7,7 @@ var funcNames = []func(){
 	ArrayTest,
 	CopyKeyword,
 	DeferExecute,
+	ForRange,
 	IotaExampleOne,
 	RecoverExampleOne,
 	RuneExampleOne,
