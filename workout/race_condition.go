@@ -7,15 +7,7 @@ import (
 
 var counter int
 
-func printValue() string {
-	return "hell"
-}
-
 func RaceCondition() {
-
-	val := printValue()
-
-	println("val", val)
 
 	wg := sync.WaitGroup{}
 
