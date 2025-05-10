@@ -21,3 +21,4 @@ func Run(funcName string) {
 	add(param...)
 	fmt.Println("variadic")
 }
+
