@@ -1,6 +1,7 @@
 package concurrency
 
 import (
+	"WorkShop/config"
 	"encoding/json"
 	"fmt"
 	"net/http"
@@ -8,10 +9,9 @@ import (
 	"time"
 )
 
-// const apikey_gr = "c1e91754906e46eaab3729738ec61306"
-const apikey_gr = "bd5e378503939ddaee76f12ad7a97608"
+var apikey_gr = config.AppConfig.ApikeyGR
 
-// https://api.openweathermap.org/data/2.5/weather?q=chennai&appid=c1e91754906e46eaab3729738ec61306
+// https://api.openweathermap.org/data/2.5/weather?q=chennai&appid={apikey_gr}
 
 
 type WeatherGR struct {

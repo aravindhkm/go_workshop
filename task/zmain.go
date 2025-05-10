@@ -5,6 +5,7 @@ import "fmt"
 var funcNames = []func(){
 	PrintAddEvenGoRoutineMain,
 	PrintAddEvenGoRoutine,
+	AddEvenLiner,
 	UnionIntersectExecute,
 	FindMissingNumberInUnsortedArray,
 	GarbageExecute,

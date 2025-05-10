@@ -7,29 +7,25 @@ import (
 	"time"
 )
 
-// const apikey = "c1e91754906e46eaab3729738ec61306"
-const apikey = "bd5e378503939ddaee76f12ad7a97608"
-
 // https://api.openweathermap.org/data/2.5/weather?q=chennai&appid=c1e91754906e46eaab3729738ec61306
 
-
 type Weather struct {
-	ID int `json:"id"`
-	Main string `json:"main"`
+	ID          int    `json:"id"`
+	Main        string `json:"main"`
 	Description string `json:"description"`
-	Icon string `json:"icon"`
+	Icon        string `json:"icon"`
 }
 
 type ApiResult struct {
-	Name string `json:"name"`
-	Id int `json:"id"`
-	TimeZone int `json:"timezone"`
-	Weather []Weather `json:"weather"`
+	Name     string    `json:"name"`
+	Id       int       `json:"id"`
+	TimeZone int       `json:"timezone"`
+	Weather  []Weather `json:"weather"`
 }
 
 func weather_api_normal_call(cityName string) {
 
-	url := fmt.Sprintf("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s",cityName, apikey)
+	url := fmt.Sprintf("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s", cityName, apikey_gr)
 	res, err := http.Get(url)
 
 	if err != nil {
@@ -50,7 +46,7 @@ func weather_api_normal_call(cityName string) {
 	fmt.Println("Description:", finalResult.Weather[0].Description)
 	fmt.Println("Icon:", finalResult.Weather[0].Icon)
 	fmt.Println("Timezone:", finalResult.TimeZone)
-	fmt.Println("")	
+	fmt.Println("")
 
 	// finalResult := make(map[string]interface{})
 	// for key, value := range finalResult {
@@ -58,11 +54,9 @@ func weather_api_normal_call(cityName string) {
 	// }
 }
 
-
 func WeatherApiNormal() {
 
 	start := time.Now()
-
 
 	city_name := []string{"chennai", "madurai", "trichy", "bengaluru", "coimbatore"}
 
@@ -73,7 +67,6 @@ func WeatherApiNormal() {
 	elapsed := time.Since(start)
 
 	fmt.Printf("Time taken for %s\n", elapsed)
-
 
 	fmt.Println("WeatherApiNormal")
 }
