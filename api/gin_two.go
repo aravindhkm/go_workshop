@@ -9,7 +9,7 @@ import (
 )
 
 func Pong(ctx *gin.Context) {
-	
+
 	ctx.AbortWithStatusJSON(
 		http.StatusOK,
 		gin.H{
@@ -50,7 +50,7 @@ func Create(ctx *gin.Context) {
 	}
 	value := map[string]any{
 		"message": "created successfully",
-		"data": payload, 
+		"data":    payload,
 	}
 
 	ctx.JSON(

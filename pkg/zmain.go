@@ -1,12 +1,9 @@
-package api
+package pkg
 
 import "fmt"
 
-const MyExportedVar = "I am accessible"
-
 var funcNames = []func(){
-	GinExampleOne,
-	GinExampleTwo,
+	ReadVarPkg,
 }
 
 // Run executes a function by key from the store

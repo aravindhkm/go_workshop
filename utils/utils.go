@@ -13,6 +13,7 @@ import (
 	"WorkShop/leetcode"
 	"WorkShop/loop"
 	"WorkShop/mapping"
+	"WorkShop/pkg"
 	"WorkShop/problem"
 	"WorkShop/routine"
 	"WorkShop/sort"
@@ -23,7 +24,7 @@ import (
 	"strings"
 )
 
-var runMap = map[string] func(string) {
+var runMap = map[string]func(string){
 	"generics":    generics.Run,
 	"variadic":    variadic.Run,
 	"loop":        loop.Run,
@@ -41,6 +42,7 @@ var runMap = map[string] func(string) {
 	"problem":     problem.Run,
 	"routine":     routine.Run,
 	"interview":   interview.Run,
+	"pkg":         pkg.Run,
 }
 
 func FindRunMap(pkgName string) func(string) {

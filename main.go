@@ -15,7 +15,7 @@ func main() {
 
 	pkgName := os.Args[1]
 	funcName := ""
-	
+
 	if len(os.Args) >= 3 {
 		funcName = os.Args[2]
 	}
