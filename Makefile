@@ -14,7 +14,7 @@ commit: add
 
 # Target to push the changes to the current branch
 push: commit
-	git push origin $(CURRENT_BRANCH)
+	git push -f origin $(CURRENT_BRANCH)
 
 # Default target: run all steps (add, commit, push)
 all: push
