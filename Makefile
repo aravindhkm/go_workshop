@@ -19,4 +19,10 @@ push: commit
 # Default target: run all steps (add, commit, push)
 all: push
 
+run-%:
+	@args="$(wordlist 2, 99, $(MAKECMDGOALS))"; \
+	go run main.go $$args
 
+# Prevent make from thinking 'workout' and '1' are targets
+%:
+	@:
