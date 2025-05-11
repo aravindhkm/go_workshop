@@ -38,7 +38,7 @@ func StringImmutableTwo() {
 // s := "世界"
 // fmt.Println(len(s))         // Outputs: 6 (each Chinese character = 3 bytes)
 // fmt.Println(len([]rune(s))) // Outputs: 2
-
+// StringReverseTwo is a bad approach
 
 func StringReverseOne() {
 	s := "Hello, 世界"
