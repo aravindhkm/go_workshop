@@ -18,6 +18,7 @@
 !.github
 bin
 .env
+!.env.sample
 tmp
 
 
