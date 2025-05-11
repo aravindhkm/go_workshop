@@ -16,7 +16,6 @@
 !/.yamllint
 !.gitignore
 !.github
-*.iml
 bin
 .env
 tmp
