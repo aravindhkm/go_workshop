@@ -9,8 +9,6 @@ import (
 	"time"
 )
 
-var apikey_gr = config.AppConfig.ApikeyGR
-
 // https://api.openweathermap.org/data/2.5/weather?q=chennai&appid={apikey_gr}
 
 
@@ -29,7 +27,7 @@ type ApiResultGR struct {
 }
 
 func weather_api_gr_call(cityName string,ch chan ApiResultGR,wg *sync.WaitGroup) {
-	url := fmt.Sprintf("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s",cityName, apikey_gr)
+	url := fmt.Sprintf("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s",cityName, config.AppConfig.ApikeyGR)
 	res, err := http.Get(url)
 
 	if err != nil {

@@ -1,6 +1,7 @@
 package concurrency
 
 import (
+	"WorkShop/config"
 	"encoding/json"
 	"fmt"
 	"net/http"
@@ -25,7 +26,7 @@ type ApiResult struct {
 
 func weather_api_normal_call(cityName string) {
 
-	url := fmt.Sprintf("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s", cityName, apikey_gr)
+	url := fmt.Sprintf("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s", cityName, config.AppConfig.ApikeyGR)
 	res, err := http.Get(url)
 
 	if err != nil {

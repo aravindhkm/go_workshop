@@ -1,22 +1,9 @@
-package keyword
+package tool
 
 import "fmt"
 
 var funcNames = []func(){
-	ReferenceOrValue,
-	ArrayTest,
-	CopyKeyword,
-	DeferExecute,
-	ForRange,
-	IotaExampleOne,
-	MapKey,
-	RecoverExampleOne,
-	RuneExampleOne,
-	SliceAndCap,
-	SliceTest,
-	StringImmutable,
-	StructExampleOne,
-	SwapTwoNumberExecute,
+	VetExample,
 }
 
 // Run executes a function by key from the store

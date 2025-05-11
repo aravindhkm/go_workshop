@@ -28,7 +28,7 @@ func BufferChannelOne() {
 	
 	result <- 5
 	result <- 1
-	result <- 10
+	// result <- 10
 
 	close(result)
 

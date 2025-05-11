@@ -1,6 +1,8 @@
 package concurrency
 
-import "fmt"
+import (
+	"fmt"
+)
 
 var funcNames = []func(){
 	BufferChannelOne,

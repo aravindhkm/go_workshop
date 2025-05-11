@@ -18,6 +18,7 @@ import (
 	"WorkShop/routine"
 	"WorkShop/sort"
 	"WorkShop/task"
+	"WorkShop/tool"
 	"WorkShop/variadic"
 	"WorkShop/workout"
 	"fmt"
@@ -44,7 +45,8 @@ var runMap = map[string]func(string){
 	"routine":     routine.Run,
 	"interview":   interview.Run,
 	"pkg":         pkg.Run,
-	"workout": workout.Run,
+	"workout":     workout.Run,
+	"tool":        tool.Run,
 }
 
 func FindRunMap(pkgName string) func(string) {
