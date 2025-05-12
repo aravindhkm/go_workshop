@@ -14,3 +14,6 @@ To run an example, you need to pass the desired module name as an argument when 
 ```bash
 go run main.go <module_name> <func_name_as_number>
 
+
+
+PS1='\[\e[1;32m\]\w\[\e[0m\] \$ '
