@@ -1,6 +1,9 @@
 package keyword
 
-import "fmt"
+import (
+	"WorkShop/config"
+	"fmt"
+)
 
 var funcNames = []func(){
 	ReferenceOrValue,
@@ -21,17 +24,12 @@ var funcNames = []func(){
 
 // Run executes a function by key from the store
 func Run(funcName string) {
-	var funcStore = map[string]func(){}
+	currDir := "./keyword"
+	runKey, err := config.FindFuncKey(currDir, funcName)
 
-	// Populate the map with function names as keys
-	for index, fn := range funcNames {
-		funcStore[fmt.Sprintf("%d", index+1)] = fn
+	if err != nil {
+		fmt.Printf("Error in %s: %s\n", currDir, err.Error())
 	}
-	if fn, exists := funcStore[funcName]; exists {
-		fn()
-		return
-	} else {
-		funcStore["1"]()
-		return
-	}
+	fn := funcNames[runKey]
+	fn()
 }
