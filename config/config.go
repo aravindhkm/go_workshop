@@ -53,14 +53,15 @@ func FindFuncKey(dirName string, funcName string) (int, error) {
 	}
 
 	var result int = 0
-
+	n, err := strconv.Atoi(funcName)
+	if err != nil {
+		fmt.Println("Invalid function name:", funcName)
+		return 0, err
+	}
 	if AppConfig.IsReverse {
-		n, err := strconv.Atoi(funcName)
-		if err != nil {
-			fmt.Println("Invalid function name:", funcName)
-			return 0, err
-		}
 		result = fileCount - n
+	} else {
+		result = n-1
 	}
 
 	return result, nil

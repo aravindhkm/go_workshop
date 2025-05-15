@@ -13,6 +13,7 @@ var funcNames = []func(){
 	ForRange,
 	IotaExampleOne,
 	MapKey,
+	PtrOne,
 	RecoverExampleOne,
 	RuneExampleOne,
 	SliceAndCap,
@@ -26,7 +27,7 @@ var funcNames = []func(){
 func Run(funcName string) {
 	currDir := "./keyword"
 	runKey, err := config.FindFuncKey(currDir, funcName)
-
+	
 	if err != nil {
 		fmt.Printf("Error in %s: %s\n", currDir, err.Error())
 	}
