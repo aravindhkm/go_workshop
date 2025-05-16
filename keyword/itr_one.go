@@ -40,7 +40,7 @@ func ItrOne() {
 	paypalInfo := &CardDetails{"Aravindh", 14839459384935, 20000, "PayPal"}
 
 	paymentMethods := []PaymentMethod{creditInfo, debitInfo, gpayInfo, paypalInfo}
-	payments := []int{10, 20, 30}
+	payments := []int{10, 20, 30, 40}
 
 	BulkPay(paymentMethods, payments)
 
