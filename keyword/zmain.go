@@ -12,6 +12,7 @@ var funcNames = []func(){
 	DeferExecute,
 	ForRange,
 	IotaExampleOne,
+	ItrOne,
 	MapKey,
 	PtrOne,
 	RecoverExampleOne,
