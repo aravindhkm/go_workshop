@@ -13,7 +13,7 @@ func StringImmutableOne() {
 	// Instead, create a new string
 	newStr := "h" + str[1:]
 	fmt.Println(newStr)
-	fmt.Println(" \n")
+	// fmt.Println(" \n")
 }
 
 func StringImmutableTwo() {
