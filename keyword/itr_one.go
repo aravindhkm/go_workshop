@@ -34,16 +34,15 @@ func (c *CardDetails) Pay(amount int) {
 }
 
 func ItrOne() {
-	creditInfo := &CardDetails{"Aravindh", 14839459384935, 10000, "Credit Card"}
-	debitInfo := &CardDetails{"Aravindh", 14839459384935, 20000, "Debit Card"}
-	gpayInfo := &CardDetails{"Aravindh", 14839459384935, 20000, "G Pay"}
-	paypalInfo := &CardDetails{"Aravindh", 14839459384935, 20000, "PayPal"}
+	creditInfo := &CardDetails{"1", 1, 10000, "Credit Card"}
+	debitInfo := &CardDetails{"2", 2, 20000, "Debit Card"}
+	gpayInfo := &CardDetails{"3", 3, 20000, "G Pay"}
+	paypalInfo := &CardDetails{"4", 4, 20000, "PayPal"}
 
 	paymentMethods := []PaymentMethod{creditInfo, debitInfo, gpayInfo, paypalInfo}
 	payments := []int{10, 20, 30, 40}
 
 	BulkPay(paymentMethods, payments)
-
 
 	fmt.Println("Interface")
 }
