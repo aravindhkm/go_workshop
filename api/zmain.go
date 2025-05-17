@@ -10,6 +10,7 @@ const MyExportedVar = "I am accessible"
 var funcNames = []func(){
 	GinExampleOne,
 	GinExampleTwo,
+	HttpApiOne,
 }
 
 // Run executes a function by key from the store

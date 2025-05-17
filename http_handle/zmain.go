@@ -6,13 +6,14 @@ import (
 )
 
 var funcNames = []func(){
+	HttpGetOne,
 	HttpPostExampleOne,
 	HttpPostExampleTwo,
 }
 
 // Run executes a function by key from the store
 func Run(funcName string) {
-	currDir := "./httphandle"
+	currDir := "./http_handle"
 	runKey, err := config.FindFuncKey(currDir, funcName)
 
 	if err != nil {
