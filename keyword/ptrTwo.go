@@ -48,11 +48,11 @@ func PtrTwo() {
 
 	fmt.Println("final name", name)
 
-	// fmt.Println(name)
-	// fmt.Println(*namePointer)
-	// printPointerVal(namePointer)
-	// fmt.Println(name)
-	// fmt.Println(*namePointer)
+	fmt.Println(name)
+	fmt.Println(*namePointer)
+	printPointerVal(namePointer)
+	fmt.Println(name)
+	fmt.Println(*namePointer)
 }
 
 // Question 6:
