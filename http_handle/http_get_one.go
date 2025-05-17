@@ -4,7 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"log"
+
+	// "log"
 	"net/http"
 )
 
@@ -22,13 +23,17 @@ func HttpGetOne() {
 
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
-		log.Fatalf("Failed to read response body: %v", err)
+		// log.Fatalf("Failed to read response body: %v", err)
 	}
 
 	var result interface{}
 	if err := json.Unmarshal(body, &result); err != nil {
-		log.Fatalf("Failed to parse JSON: %v", err)
+		// log.Fatalf("Failed to parse JSON: %v", err)
 	}
 
-	fmt.Println("Random Dog Image URL:", result)
+	// fmt.Println("Random Dog Image URL:", result)
+
+	for v := range 10 {
+		fmt.Println("print", v)
+	}
 }

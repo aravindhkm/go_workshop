@@ -9,6 +9,7 @@ var funcNames = []func(){
 	HttpGetOne,
 	HttpPostExampleOne,
 	HttpPostExampleTwo,
+	IoReaderOne,
 }
 
 // Run executes a function by key from the store

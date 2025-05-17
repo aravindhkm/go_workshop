@@ -7,6 +7,7 @@ import (
 	"WorkShop/error"
 	"WorkShop/generics"
 	httphandle "WorkShop/http_handle"
+	"WorkShop/interface_handle"
 	"WorkShop/interview"
 	"WorkShop/json"
 	"WorkShop/keyword"
@@ -47,6 +48,7 @@ var runMap = map[string]func(string){
 	"pkg":         pkg.Run,
 	"workout":     workout.Run,
 	"tool":        tool.Run,
+	"interface_handle": interfacehandle.Run,
 }
 
 func FindRunMap(pkgName string) func(string) {

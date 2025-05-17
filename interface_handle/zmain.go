@@ -1,4 +1,4 @@
-package keyword
+package interfacehandle
 
 import (
 	"WorkShop/config"
@@ -6,27 +6,16 @@ import (
 )
 
 var funcNames = []func(){
-	ReferenceOrValue,
-	ArrayTest,
-	CopyKeyword,
-	DeferExecute,
-	ForRange,
-	IotaExampleOne,
-	MapKey,
-	PtrOne,
-	PtrTwo,
-	RecoverExampleOne,
-	RuneExampleOne,
-	SliceAndCap,
-	SliceTest,
-	StringImmutable,
-	StructExampleOne,
-	SwapTwoNumberExecute,
+	ItrFour,
+	ItrOne,
+	ItrTwo,
+	ItrThree,
+	ItrFive,
 }
 
 // Run executes a function by key from the store
 func Run(funcName string) {
-	currDir := "./keyword"
+	currDir := "./interface_handle"
 	runKey, err := config.FindFuncKey(currDir, funcName)
 
 	if err != nil {
