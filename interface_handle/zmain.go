@@ -6,11 +6,12 @@ import (
 )
 
 var funcNames = []func(){
+	ItrFive,
 	ItrFour,
 	ItrOne,
+	ItrOwnWork,
 	ItrTwo,
 	ItrThree,
-	ItrFive,
 }
 
 // Run executes a function by key from the store
