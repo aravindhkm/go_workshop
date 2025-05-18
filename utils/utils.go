@@ -6,8 +6,9 @@ import (
 	"WorkShop/ctx"
 	"WorkShop/error"
 	"WorkShop/generics"
+	goroutinework "WorkShop/goroutine_work"
 	httphandle "WorkShop/http_handle"
-	"WorkShop/interface_handle"
+	interfacehandle "WorkShop/interface_handle"
 	"WorkShop/interview"
 	"WorkShop/json"
 	"WorkShop/keyword"
@@ -28,27 +29,28 @@ import (
 )
 
 var runMap = map[string]func(string){
-	"generics":    generics.Run,
-	"variadic":    variadic.Run,
-	"loop":        loop.Run,
-	"concurrency": concurrency.Run,
-	"sort":        sort.Run,
-	"error":       error.Run,
-	"leetcode":    leetcode.Run,
-	"keyword":     keyword.Run,
-	"json":        json.Run,
-	"ctx":         ctx.Run,
-	"api":         api.Run,
-	"mapping":     mapping.Run,
-	"http_handle": httphandle.Run,
-	"task":        task.Run,
-	"problem":     problem.Run,
-	"routine":     routine.Run,
-	"interview":   interview.Run,
-	"pkg":         pkg.Run,
-	"workout":     workout.Run,
-	"tool":        tool.Run,
+	"generics":         generics.Run,
+	"variadic":         variadic.Run,
+	"loop":             loop.Run,
+	"concurrency":      concurrency.Run,
+	"sort":             sort.Run,
+	"error":            error.Run,
+	"leetcode":         leetcode.Run,
+	"keyword":          keyword.Run,
+	"json":             json.Run,
+	"ctx":              ctx.Run,
+	"api":              api.Run,
+	"mapping":          mapping.Run,
+	"http_handle":      httphandle.Run,
+	"task":             task.Run,
+	"problem":          problem.Run,
+	"routine":          routine.Run,
+	"interview":        interview.Run,
+	"pkg":              pkg.Run,
+	"workout":          workout.Run,
+	"tool":             tool.Run,
 	"interface_handle": interfacehandle.Run,
+	"goroutine_work": goroutinework.Run,
 }
 
 func FindRunMap(pkgName string) func(string) {
