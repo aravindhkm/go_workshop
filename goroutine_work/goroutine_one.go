@@ -10,7 +10,7 @@ type Result struct {
 	statusCode int
 }
 
-func MakeCall(url string, ch chan Result) {
+func makeCall(url string, ch chan Result) {
 	res, err := http.Get(url)
 	if err != nil {
 		fmt.Printf("Error fetching URL %s: %v\n", url, err)
@@ -31,16 +31,20 @@ func GoRoutineOne() {
 	ch := make(chan Result)
 
 	for _, endpoint := range urls {
-		go MakeCall(endpoint, ch)
+		go makeCall(endpoint, ch)
 	}
 
 	// channel receiver is a blocking area
 
-	fmt.Println("end result 1", <-ch)
+	// fmt.Println("end result 1", <-ch)
+	// // fmt.Println("end result 2", <-ch)
+	// // fmt.Println("end result 3", <-ch)
+	// // fmt.Println("end result 3", <-ch)
 
-
-	// fmt.Println("end result 2", <-ch)
-	// fmt.Println("end result 3", <-ch)
-	// fmt.Println("end result 3", <-ch)
+	for resCh := range ch {
+		go func() {
+			makeCall(resCh.endpoint, ch)
+		}()
+	}
 
 }
