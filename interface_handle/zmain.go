@@ -10,8 +10,9 @@ var funcNames = []func(){
 	ItrFour,
 	ItrOne,
 	ItrOwnWork,
-	ItrTwo,
+	ItrSix,
 	ItrThree,
+	ItrTwo,
 }
 
 // Run executes a function by key from the store
