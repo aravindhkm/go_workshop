@@ -6,7 +6,7 @@ import (
 )
 
 func printOdd(ch chan int, wg *sync.WaitGroup) {
-	for i := 1; i <= 10; i++ {
+	for i := range 10 {
 		if i%2 != 0 {
 			// fmt.Println(i)
 			ch <- i
@@ -17,7 +17,7 @@ func printOdd(ch chan int, wg *sync.WaitGroup) {
 }
 
 func printEven(ch chan int, wg *sync.WaitGroup) {
-	for i := 1; i <= 10; i++ {
+	for i := range 10 {
 		if i%2 == 0 {
 			// fmt.Println(i)
 			ch <- i
@@ -33,12 +33,12 @@ func AddEvenLiner() {
 	wg := sync.WaitGroup{}
 
 	wg.Add(2)
-	go printOdd(oddCh, &wg)
 	go printEven(evenCh, &wg)
+	go printOdd(oddCh, &wg)
 
 	for range [5]int{} {
-		fmt.Println(<-oddCh)
 		fmt.Println(<-evenCh)
+		fmt.Println(<-oddCh)
 	}
 	// close(oddCh)
 	// close(evenCh)
