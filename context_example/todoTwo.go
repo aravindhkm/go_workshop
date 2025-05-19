@@ -3,7 +3,6 @@ package contextexample
 import (
 	"context"
 	"fmt"
-	"net/http"
 	"time"
 )
 
@@ -12,6 +11,7 @@ func handlerUsingTODOTwo() {
 	ctx := context.Background()
 	doWorkTwo(ctx) // Work doesn't cancel even if the client disconnects
 	fmt.Println("Finished with TODO context (won't stop early)")
+	fmt.Println()
 }
 
 // ✅ This handler uses a timeout to cancel slow work
@@ -21,6 +21,8 @@ func handlerWithTimeoutTwo() {
 
 	doWorkTwo(ctx) // Work will be cancelled if it exceeds 2s
 	fmt.Println("Finished with timeout context (2s max)")
+	fmt.Println()
+
 }
 
 // Simulated long-running task that respects context cancellation
@@ -37,8 +39,4 @@ func doWorkTwo(ctx context.Context) {
 func ToDoTwo() {
 	handlerUsingTODOTwo()
 	handlerWithTimeoutTwo()
-
-	fmt.Println("Server started on :8080")
-	http.ListenAndServe(":8080", nil)
-
 }
