@@ -7,6 +7,7 @@ import (
 
 var funcNames = []func(){
 	ToDoOne,
+	ToDoTwo,
 }
 
 // Run executes a function by key from the store
