@@ -8,7 +8,8 @@ import (
 var funcNames = []func(){
 	PrintAddEvenGoRoutineMain,
 	PrintAddEvenGoRoutine,
-	AddEvenLiner,
+	AddEvenLinerOne,
+	AddEvenLinerTwo,
 	UnionIntersectExecute,
 	FindMissingNumberInUnsortedArray,
 	GarbageExecute,

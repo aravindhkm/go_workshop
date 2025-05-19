@@ -27,7 +27,7 @@ func printEven(oddCh, evenCh chan bool, wg *sync.WaitGroup) {
 	}
 }
 
-func AddEvenLiner() {
+func AddEvenLinerOne() {
 	oddCh, evenCh := make(chan bool), make(chan bool)
 	var wg sync.WaitGroup
 	wg.Add(2)
