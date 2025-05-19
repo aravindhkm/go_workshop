@@ -5,44 +5,31 @@ import (
 	"sync"
 )
 
-func printOdd(ch chan int, wg *sync.WaitGroup) {
-	for i := range 10 {
-		if i%2 != 0 {
-			// fmt.Println(i)
-			ch <- i
-		}
+func printOdd(oddCh, evenCh chan bool, wg *sync.WaitGroup) {
+	defer wg.Done()
+	for i := 1; i <= 9; i += 2 {
+		fmt.Println("Odd:", i)
+		<-oddCh        		// block odd until receive
+		evenCh <- true 		// release the even block
 	}
-
-	wg.Done()
 }
 
-func printEven(ch chan int, wg *sync.WaitGroup) {
-	for i := range 10 {
-		if i%2 == 0 {
-			// fmt.Println(i)
-			ch <- i
-		}
+func printEven(oddCh, evenCh chan bool, wg *sync.WaitGroup) {
+	defer wg.Done()
+	for i := 2; i <= 10; i += 2 {
+		oddCh <- true 			// release the odd block
+		fmt.Println("Even:", i)
+		<-evenCh 				// block even until receive
 	}
-
-	wg.Done()
 }
 
 func AddEvenLiner() {
-	oddCh, evenCh := make(chan int), make(chan int)
-
-	wg := sync.WaitGroup{}
-
+	oddCh, evenCh := make(chan bool), make(chan bool)
+	var wg sync.WaitGroup
 	wg.Add(2)
-	go printEven(evenCh, &wg)
-	go printOdd(oddCh, &wg)
 
-	for range [5]int{} {
-		fmt.Println(<-evenCh)
-		fmt.Println(<-oddCh)
-	}
-	// close(oddCh)
-	// close(evenCh)
+	go printOdd(oddCh, evenCh, &wg)
+	go printEven(oddCh, evenCh, &wg)
 
 	wg.Wait()
-
 }
