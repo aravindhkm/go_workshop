@@ -9,6 +9,7 @@ var funcNames = []func(){
 	BufferChannelOne,
 	BufferChannelTwo,
 	ChannelDirection,
+	CloseChOne,
 	GR_CH_Simple,
 	Gr_Simple_Sleep,
 	Gr_Simple_Sleep_Two,
