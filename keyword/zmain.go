@@ -19,6 +19,7 @@ var funcNames = []func(){
 	PtrTwo,
 	RecoverExampleOne,
 	RuneExampleOne,
+	SelectOne,
 	SliceAndCap,
 	SliceTest,
 	StringImmutable,
