@@ -6,7 +6,7 @@ import (
 )
 
 var funcNames = []func(){
-	// PrintAddEvenGoRoutineMain,
+	ToDoOne,
 }
 
 // Run executes a function by key from the store

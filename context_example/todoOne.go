@@ -9,7 +9,7 @@ import (
 
 // ❌ This handler uses context.TODO(), which does nothing on cancel/timeout
 func handlerUsingTODO(w http.ResponseWriter, r *http.Request) {
-	ctx := context.TODO()
+	ctx := context.Background()
 	doWork(ctx) // Work doesn't cancel even if the client disconnects
 	fmt.Fprintln(w, "Finished with TODO context (won't stop early)")
 }
