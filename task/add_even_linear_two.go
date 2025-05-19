@@ -13,7 +13,7 @@ func printOddTwo(oddCh, evenCh chan bool, wg *sync.WaitGroup) {
 			fmt.Println(i)
 			evenCh <- true // release the even block
 		}
-	}
+	} 
 }
 
 func printEvenTwo(oddCh, evenCh chan bool, wg *sync.WaitGroup) {
