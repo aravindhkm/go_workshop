@@ -3,6 +3,7 @@ package utils
 import (
 	"WorkShop/api"
 	"WorkShop/concurrency"
+	contextexample "WorkShop/context_example"
 	"WorkShop/ctx"
 	"WorkShop/error"
 	"WorkShop/generics"
@@ -50,7 +51,8 @@ var runMap = map[string]func(string){
 	"workout":          workout.Run,
 	"tool":             tool.Run,
 	"interface_handle": interfacehandle.Run,
-	"goroutine_work": goroutinework.Run,
+	"goroutine_work":   goroutinework.Run,
+	"context_example":  contextexample.Run,
 }
 
 func FindRunMap(pkgName string) func(string) {
