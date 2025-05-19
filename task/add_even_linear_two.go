@@ -9,7 +9,7 @@ func printOddTwo(oddCh, evenCh chan bool, wg *sync.WaitGroup) {
 	defer wg.Done()
 	for i := range 10 {
 		if i%2 != 0 {
-			<-oddCh        // block odd until receive
+			<-oddCh // block odd until receive
 			fmt.Println(i)
 			evenCh <- true // release the even block
 		}
@@ -22,7 +22,7 @@ func printEvenTwo(oddCh, evenCh chan bool, wg *sync.WaitGroup) {
 		if i%2 == 0 {
 			fmt.Println(i)
 			oddCh <- true // release the odd block
-			<-evenCh // block even until receive
+			<-evenCh      // block even until receive
 		}
 	}
 }

@@ -13,7 +13,7 @@ commit: add
 	git commit -m $(COMMIT_MSG)
 
 # Target to push the changes to the current branch
-push: commit
+push: clear && commit
 	git push -f origin $(CURRENT_BRANCH)
 
 # Default target: run all steps (add, commit, push)
