@@ -11,6 +11,7 @@ var funcNames = []func(){
 	AddEvenLinerOne,
 	AddEvenLinerTwo,
 	UnionIntersectExecute,
+	FibonacciOne,
 	FindMissingNumberInUnsortedArray,
 	GarbageExecute,
 	InventoryExecute,
