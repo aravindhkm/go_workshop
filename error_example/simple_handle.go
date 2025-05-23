@@ -1,4 +1,4 @@
-package error
+package errorexample
 
 import (
 	"errors"
@@ -6,7 +6,7 @@ import (
 )
 
 func isInteger(args interface{}) error {
-	fmt.Println("args",args)
+	fmt.Println("args", args)
 	if args != nil {
 		fmt.Println("printing")
 	}
@@ -18,7 +18,6 @@ func isInteger(args interface{}) error {
 		return errors.New("not a integer")
 	}
 }
-
 
 func SimpleErrorHandle() {
 	err := isInteger(1)
@@ -32,6 +31,5 @@ func SimpleErrorHandle() {
 	if err != nil {
 		fmt.Println("error", err)
 	}
-
 
 }

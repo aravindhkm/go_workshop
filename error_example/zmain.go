@@ -1,4 +1,4 @@
-package error
+package errorexample
 
 import (
 	"WorkShop/config"
@@ -6,12 +6,13 @@ import (
 )
 
 var funcNames = []func(){
+	OwnErrorMsgOne,
 	SimpleErrorHandle,
 }
 
 // Run executes a function by key from the store
 func Run(funcName string) {
-	currDir := "./error"
+	currDir := "./error_example"
 	runKey, err := config.FindFuncKey(currDir, funcName)
 
 	if err != nil {

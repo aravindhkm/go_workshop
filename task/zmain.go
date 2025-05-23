@@ -15,8 +15,10 @@ var funcNames = []func(){
 	FindMissingNumberInUnsortedArray,
 	GarbageExecute,
 	InventoryExecute,
+	QueueOne,
 	RemoveZeroFromArray,
 	SelectFibonacciExample,
+	StackOne,
 }
 
 // Run executes a function by key from the store

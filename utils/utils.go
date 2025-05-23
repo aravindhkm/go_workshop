@@ -5,7 +5,7 @@ import (
 	"WorkShop/concurrency"
 	contextexample "WorkShop/context_example"
 	"WorkShop/ctx"
-	"WorkShop/error"
+	errorexample "WorkShop/error_example"
 	"WorkShop/generics"
 	goroutinework "WorkShop/goroutine_work"
 	httphandle "WorkShop/http_handle"
@@ -35,7 +35,7 @@ var runMap = map[string]func(string){
 	"loop":             loop.Run,
 	"concurrency":      concurrency.Run,
 	"sort":             sort.Run,
-	"error":            error.Run,
+	"error_example":     errorexample.Run,
 	"leetcode":         leetcode.Run,
 	"keyword":          keyword.Run,
 	"json":             json.Run,
