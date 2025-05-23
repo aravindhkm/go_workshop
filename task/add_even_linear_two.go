@@ -28,8 +28,8 @@ func printEvenTwo(oddCh, evenCh chan bool, wg *sync.WaitGroup) {
 	defer wg.Done()
 	for i := range 6 {
 		if i%2 == 0 {
-			fmt.Println()
-			// fmt.Println(i)
+			// fmt.Println()
+			fmt.Println(i)
 
 			fmt.Println("Odd Send", i)
 			oddCh <- true // release the odd block

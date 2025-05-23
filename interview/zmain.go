@@ -7,6 +7,7 @@ import (
 
 var funcNames = []func(){
 	FindPairSumsOne,
+	PianoOne,
 	SecondLargetNumberOne,
 }
 
