@@ -20,6 +20,7 @@ func (d *WgLockType) Set(key string, value int) {
 func WgLockUnlockExampleOne() {
 	state := WgLockType{Data: make(map[string]int)}
 	wg := sync.WaitGroup{}
+
 	for i := 0; i < 101; i++ {
 		wg.Add(1)
 		go func() {

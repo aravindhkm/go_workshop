@@ -7,6 +7,7 @@ import (
 	"WorkShop/ctx"
 	errorexample "WorkShop/error_example"
 	"WorkShop/generics"
+	workerexample "WorkShop/worker_example"
 	goroutinework "WorkShop/goroutine_work"
 	httphandle "WorkShop/http_handle"
 	interfacehandle "WorkShop/interface_handle"
@@ -35,7 +36,7 @@ var runMap = map[string]func(string){
 	"loop":             loop.Run,
 	"concurrency":      concurrency.Run,
 	"sort":             sort.Run,
-	"error_example":     errorexample.Run,
+	"error_example":    errorexample.Run,
 	"leetcode":         leetcode.Run,
 	"keyword":          keyword.Run,
 	"json":             json.Run,
@@ -53,6 +54,7 @@ var runMap = map[string]func(string){
 	"interface_handle": interfacehandle.Run,
 	"goroutine_work":   goroutinework.Run,
 	"context_example":  contextexample.Run,
+	"worker_example":   workerexample.Run,
 }
 
 func FindRunMap(pkgName string) func(string) {
