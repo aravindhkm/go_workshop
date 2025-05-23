@@ -14,7 +14,7 @@ var floderName = map[string]func(string){
 	"shufflearray": shufflearray.Run,
 }
 
-var execFloder string = "shufflearray"
+var execFloder string = "linkedlist"
 
 // Run executes a function by key from the store
 func Run(funcName string) {

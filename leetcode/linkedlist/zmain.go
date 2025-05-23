@@ -4,6 +4,7 @@ import "fmt"
 
 var funcNames = []func(){
 	LinkedListExecuteOne,
+	LinkedListExecuteTwo,
 }
 
 // Run executes a function by key from the store
