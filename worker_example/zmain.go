@@ -8,6 +8,7 @@ import (
 var funcNames = []func(){
 	AtomicExampleOne,
 	WorkerPoolOne,
+	WorkerPoolThree,
 	WorkerPoolTwo,
 }
 

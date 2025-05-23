@@ -6,8 +6,6 @@ import (
 	"github.com/google/uuid"
 )
 
-
-
 func DummyWorkOut() {
 	var arr = make([]int, 3)
 
