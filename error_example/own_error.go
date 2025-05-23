@@ -7,7 +7,7 @@ type ErrOwn struct {
 }
 
 func (err ErrOwn) Error() string {
-	return err.value
+	return fmt.Sprintf("AK Err Msg := %s", err.value)
 }
 
 func CreateErr(msg string) error {
