@@ -24,4 +24,11 @@ func StructExampleOne() {
 	exThree = Example{"Test Three", 5}
 
 	fmt.Println("exThree", exThree)
+
+	exFour := Example{Name: "fefegf"}
+	fmt.Println("exFour", exFour)
+
+	// error - too few values in struct literal of type ExamplecompilerInvalidStructLit
+	// exFive := Example{"fefegf"}
+	// fmt.Println("exFour", exFive)
 }
