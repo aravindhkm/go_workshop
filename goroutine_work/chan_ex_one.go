@@ -7,7 +7,7 @@ import (
 
 func sendData(ch chan bool, wg *sync.WaitGroup) {
 	defer wg.Done()
-	for range 2 {
+	for range 5 {
 		ch <- true
 	}
 }
@@ -23,10 +23,9 @@ func ChanExOne() {
 		fmt.Println("Print", <-chOne)
 	}
 
-	// go func() {
-	// 	close(chOne)
-	// }()
 	wg.Wait()
+
+	fmt.Println("End")
 }
 
 
