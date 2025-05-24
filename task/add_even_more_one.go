@@ -13,8 +13,11 @@ func oddChecker(oddCh, evenCh chan bool, wg *sync.WaitGroup) {
 		if data%2 != 0 {
 			fmt.Println(data)
 
-			evenCh <- true
+			// we have to stop it at last value. 
+			// if we send it then we need to add respect receiver
+			// otherwise we will face block issue
 			if data != lastNum {
+				evenCh <- true
 				<-oddCh
 			}
 		}
@@ -29,10 +32,6 @@ func evenChecker(oddCh, evenCh chan bool, wg *sync.WaitGroup) {
 			fmt.Println(data)
 			oddCh <- true
 		}
-
-		// if data == lastNum {
-		// 	<-evenCh
-		// }
 	}
 }
 
