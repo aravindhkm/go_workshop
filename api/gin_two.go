@@ -9,7 +9,6 @@ import (
 )
 
 func Pong(ctx *gin.Context) {
-
 	ctx.AbortWithStatusJSON(
 		http.StatusOK,
 		gin.H{
