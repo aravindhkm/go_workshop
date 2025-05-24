@@ -31,6 +31,12 @@ func PrimeNumOne() {
 	}
 }
 
+// Name: Trial Division Algorithm
+
+// Algorithm: Trial Division
+// Type: Basic Primality Testing
+// DSA Category: Number Theory / Brute Force Search
+
 // Time Complexity: O(√n)
 
 // Because we only check up to √n divisors.
