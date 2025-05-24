@@ -58,9 +58,19 @@ func RunWithSemaphore(total int, maxConcurrent int) {
 
 func CounterSemaphoreOne() {
 	totalGoroutines := 10
-	// maxConcurrent := 3
+	maxConcurrent := 3
 
 	RunUnrestricted(totalGoroutines)
-	// time.Sleep(2 * time.Second) // Spacer between runs
-	// RunWithSemaphore(totalGoroutines, maxConcurrent)
+	time.Sleep(2 * time.Second) // Spacer between runs
+	RunWithSemaphore(totalGoroutines, maxConcurrent)
 }
+
+
+// ✅ Why Use chan struct{} for Semaphores?
+// 1. Zero Memory Overhead
+// struct{} is the empty struct — it takes up zero bytes of memory.
+
+// It’s the most lightweight type you can send through a channel.
+
+// Using chan struct{} is a Go idiom. It signals to other developers:
+// “This channel is only being used for signaling or control — not for passing data.”
