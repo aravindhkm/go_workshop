@@ -6,6 +6,7 @@ import (
 )
 
 var funcNames = []func(){
+	GoCPU_Debug,
 	VetExample,
 }
 
