@@ -6,45 +6,44 @@ import (
 	"time"
 )
 
-func workAssignThree(workerName string, jobs <-chan int, results chan<- int, wg *sync.WaitGroup) {
-	defer wg.Done()
-
-	for j := range jobs {
-		fmt.Printf("Worker: %s Job ID: %v Started \n", workerName, j)
-		time.Sleep(time.Second)
-		fmt.Printf("Worker: %s Job ID: %v Completed \n", workerName, j)
-		results <- j
+func jobAssign(workerName string, jobCh <-chan int, resultCh chan<- int, wg *sync.WaitGroup) {
+	for jobID := range jobCh {
+		fmt.Printf("Worker: %s Job ID: %v Started\n", workerName, jobID)
+		time.Sleep(time.Second) // Simulate some work
+		fmt.Printf("Worker: %s Job ID:  ---------> %v Completed\n", workerName, jobID)
+		resultCh <- jobID
+		wg.Done()
 	}
 }
 
 func WorkerPoolThree() {
-	numJobs := 50
-	worker := [4]string{"Alice", "Bob", "Eve", "Dave"}
+	totalJobs := 15
+	workerNames := []string{"Alice", "Bob", "Eve", "Dave"}
+
+	jobCh := make(chan int)
+	resultCh := make(chan int)
 	var wg sync.WaitGroup
 
-	jobs := make(chan int)
-	results := make(chan int)
+	// Start result collector first
+	go func() {
+		for result := range resultCh {
+			fmt.Println("Ended ------------------------------>", result)
+		}
+	}()
 
-	for w := 0; w < len(worker); w++ {
-		wg.Add(1)
-		go workAssignThree(worker[w], jobs, results, &wg)
+	// Start workers
+	for _, worker := range workerNames {
+		go jobAssign(worker, jobCh, resultCh, &wg)
 	}
 
 	// Send jobs
-	go func() {
-		for j := 1; j <= numJobs; j++ {
-			jobs <- j
-		}
-		close(jobs) // Important: close after all jobs are sent
-	}()
-
-	// Collect results
-	go func() {
-		wg.Wait()      // Wait for all workers to finish
-		close(results) // Close results channel so we can range over it
-	}()
-
-	for res := range results {
-		_ = res // Process result if needed
+	for i := 0; i < totalJobs; i++ {
+		wg.Add(1)
+		jobCh <- i
 	}
+	close(jobCh)
+
+	// Wait for all jobs to finish
+	wg.Wait()
+	close(resultCh)
 }
