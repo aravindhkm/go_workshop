@@ -7,6 +7,8 @@ import (
 
 var funcNames = []func(){
 	Atomic_A,
+	Atomic_B,
+	Atomic_C,
 	CondOne,
 	Cond_Two,
 	Cond_Two_One,
