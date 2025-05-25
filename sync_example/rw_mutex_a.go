@@ -20,7 +20,7 @@ type mutexMap map[string]string
 
 func (mapData *mutexMap) read() {
 	for {
-		countGuard.Lock()
+		countGuard.Lock()  // if we comment this we will face this error "fatal error: concurrent map read and map write"
 		var _ string = (*mapData)["name"]
 		count += 1
 		countGuard.Unlock()
@@ -85,8 +85,8 @@ func rwMutex() {
 }
 
 func RW_Mutex_A() {
-	// normalMutex()
-	rwMutex()
+	normalMutex()
+	// rwMutex()
 
 	time.Sleep(time.Second * 3)
 	fmt.Printf("Final reads and writes:%d\n", count)

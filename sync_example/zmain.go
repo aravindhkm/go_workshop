@@ -11,6 +11,8 @@ var funcNames = []func(){
 	Cond_Two_One,
 	CondThree,
 	Cond_D_One,
+	Map_A,
+	Map_B,
 	RW_Mutex_A,
 }
 
