@@ -45,7 +45,7 @@ func (kp *KProducer) Produce(oId int) {
 	defer kp.cond.L.Unlock()
 
 	if kp.kitchen.IsFull() {
-		fmt.Println("⏸️ -> Producer is waiting because the message channel is full")
+		fmt.Println("⏸️ -> Producer is waiting because the kitchen is full")
 		kp.cond.Wait()
 	}
 
@@ -66,7 +66,7 @@ func (con *KConsumer) Consume() {
 	defer con.cond.L.Unlock()
 
 	if con.kitchen.IsEmpty() {
-		fmt.Println("🚫 <Consumer is waiting because the message channel is empty")
+		fmt.Println("🚫 <Consumer is waiting because the kitchen is empty")
 		con.cond.Wait()
 	}
 
