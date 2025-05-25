@@ -8,6 +8,10 @@ import (
 var funcNames = []func(){
 	ToDo_A,
 	ToDo_B,
+	WithCancel_A,
+	WithCancel_B,
+	WithDeadline_A,
+	WithValue_A,
 }
 
 // Run executes a function by key from the store
