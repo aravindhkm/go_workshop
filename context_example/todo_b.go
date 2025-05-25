@@ -36,7 +36,7 @@ func doWorkTwo(ctx context.Context) {
 	}
 }
 
-func ToDoTwo() {
+func ToDo_B() {
 	handlerUsingTODOTwo()
 	handlerWithTimeoutTwo()
 }

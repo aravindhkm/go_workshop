@@ -42,7 +42,7 @@ func doWork(ctx context.Context) {
 	}
 }
 
-func ToDoOne() {
+func ToDo_A() {
 	http.HandleFunc("/todo", handlerUsingTODO)
 	http.HandleFunc("/timeout", handlerWithTimeout)
 	http.HandleFunc("/request", handlerWithRequestContext)

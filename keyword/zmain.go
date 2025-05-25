@@ -11,6 +11,7 @@ var funcNames = []func(){
 	ByteOne,
 	Copy_A,
 	Copy_B,
+	Copy_C,
 	DeferExecute,
 	ForRange,
 	IotaExampleOne,
