@@ -30,7 +30,7 @@ func CondThree() {
 
 			counter++
 
-			if counter == maxWorkersCount {
+			if counter == int32(maxWorkersCount) {
 				fmt.Println("All workers have reached the barrier")
 				cond.Broadcast()
 			} else {
