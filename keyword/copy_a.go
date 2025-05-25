@@ -2,7 +2,7 @@ package keyword
 
 import "fmt"
 
-func CopyKeyword() {
+func Copy_A() {
 	slice_a := []int{4, 5, 6, 7}
 	arr_a := [4]int{6, 7, 8, 1}
 
