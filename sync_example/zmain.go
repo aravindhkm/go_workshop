@@ -6,6 +6,7 @@ import (
 )
 
 var funcNames = []func(){
+	Atomic_A,
 	CondOne,
 	Cond_Two,
 	Cond_Two_One,
@@ -13,6 +14,7 @@ var funcNames = []func(){
 	Cond_D_One,
 	Map_A,
 	Map_B,
+	Pool_A,
 	RW_Mutex_A,
 }
 

@@ -20,7 +20,7 @@ type mutexMap map[string]string
 
 func (mapData *mutexMap) read() {
 	for {
-		countGuard.Lock()  // if we comment this we will face this error "fatal error: concurrent map read and map write"
+		countGuard.Lock() // if we comment this we will face this error "fatal error: concurrent map read and map write"
 		var _ string = (*mapData)["name"]
 		count += 1
 		countGuard.Unlock()
@@ -108,3 +108,5 @@ func RW_Mutex_A() {
 // Attempting to lock the read lock again when the write lock is locked will also block the current goroutine
 // Attempting to lock the write lock while the read lock is locked will also block the current goroutine
 // Attempting to lock the read lock after the read lock has been locked will not block the current goroutine
+
+// https://programmer.ink/think/go-mutex-sync.mutex-and-read-write-lock-sync.rwmutex.html

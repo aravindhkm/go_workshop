@@ -21,7 +21,7 @@ func tryRegularMap() {
 			// If lock is not there,
 			// This can cause: fatal error: concurrent map writes
 			regularMap[val] = val
-			
+
 		}(i)
 	}
 
@@ -58,3 +58,5 @@ func Map_A() {
 	fmt.Println("\n=== With sync.Map (safe) ===")
 	trySyncMap()
 }
+
+// https://victoriametrics.com/blog/go-sync-map/index.html
