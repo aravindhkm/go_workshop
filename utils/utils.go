@@ -7,7 +7,6 @@ import (
 	"WorkShop/ctx"
 	errorexample "WorkShop/error_example"
 	"WorkShop/generics"
-	workerexample "WorkShop/worker_example"
 	goroutinework "WorkShop/goroutine_work"
 	httphandle "WorkShop/http_handle"
 	interfacehandle "WorkShop/interface_handle"
@@ -21,9 +20,11 @@ import (
 	"WorkShop/problem"
 	"WorkShop/routine"
 	"WorkShop/sort"
+	syncexample "WorkShop/sync_example"
 	"WorkShop/task"
 	"WorkShop/tool"
 	"WorkShop/variadic"
+	workerexample "WorkShop/worker_example"
 	"WorkShop/workout"
 	"fmt"
 	"os"
@@ -55,6 +56,7 @@ var runMap = map[string]func(string){
 	"goroutine_work":   goroutinework.Run,
 	"context_example":  contextexample.Run,
 	"worker_example":   workerexample.Run,
+	"sync_example":     syncexample.Run,
 }
 
 func FindRunMap(pkgName string) func(string) {

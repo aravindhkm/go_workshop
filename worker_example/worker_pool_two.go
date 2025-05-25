@@ -17,7 +17,7 @@ func workAssign(workerName string, jobId <-chan int, wg *sync.WaitGroup) {
 
 func WorkerPoolTwo() {
 	numOfWorker := []string{"Alice", "Bob", "Eve", "Dave"}
-	numOfJobs := 50
+	numOfJobs := 12
 
 	workCh := make(chan int)
 	var wg sync.WaitGroup
