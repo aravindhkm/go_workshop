@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func CondThree() {
+func broadcastOne() {
 	var counter int32
 
 	var wg sync.WaitGroup
@@ -44,3 +44,55 @@ func CondThree() {
 
 	wg.Wait()
 }
+
+func broadcastTwo() {
+	wg := &sync.WaitGroup{}
+
+	mu := &sync.Mutex{}
+	cond := sync.NewCond(mu)
+
+	maxIndex := 12
+	wg.Add(maxIndex)
+
+	runningGoRountine := 0
+
+	for index := 1; index <= maxIndex; index++ {
+		go func(worker int) {
+			defer wg.Done()
+
+			cond.L.Lock()
+			defer cond.L.Unlock()
+
+			runningGoRountine++
+
+			fmt.Println("Worker start the work --------->")
+
+			if maxIndex == runningGoRountine {
+				fmt.Println("<------------Close All Work------------->")
+				cond.Broadcast()
+			} else {
+				fmt.Println("Worker waiting id:", worker)
+				cond.Wait()
+			}
+
+			fmt.Println("Exist", worker)
+		}(index)
+	}
+
+	wg.Wait()
+}
+
+func CondThree() {
+	// broadcastOne()
+	broadcastTwo()
+}
+
+
+// ### 📈 GitHub Stats
+
+// <p align="center">
+//   <img src="https://github-readme-stats.vercel.app/api?username=aravindhkm&show_icons=true&theme=radical" height="160" />
+//   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aravindhkm&layout=compact&theme=radical" height="160" />
+// </p>
+
+// ---

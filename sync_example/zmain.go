@@ -11,6 +11,7 @@ var funcNames = []func(){
 	Cond_Two_One,
 	CondThree,
 	Cond_D_One,
+	RW_Mutex_A,
 }
 
 // Run executes a function by key from the store
