@@ -7,6 +7,8 @@ import (
 
 var funcNames = []func(){
 	CondOne,
+	Cond_Two,
+	CondThree,
 }
 
 // Run executes a function by key from the store

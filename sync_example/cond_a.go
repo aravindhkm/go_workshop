@@ -47,8 +47,9 @@ func CondOne() {
 	wg.Wait()
 }
 
-// The sync.Cond type provides a way to create and manage condition
-// variables. It has three main methods:
+// The sync.Cond type provides a way to create and manage condition variables.  
+// It’s commonly used when one or more goroutines need to wait until some condition 
+// becomes true. It has three main methods:
 
 // Wait(): This method causes the calling goroutine to wait until another
 // goroutine signals the condition variable. When the goroutine calls Wait(),
@@ -67,3 +68,7 @@ func CondOne() {
 // the condition variable.
 // var mu sync.Mutex
 // cond := sync.NewCond(&mu)
+
+// cond.Wait() blocks the goroutine and releases the lock until Signal() or Broadcast() is called.
+// cond.Signal() wakes one waiting goroutine.
+// cond.Broadcast() wakes all waiting goroutines.

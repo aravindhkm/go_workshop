@@ -1,0 +1,5 @@
+package syncexample
+
+func CondThree() {
+	
+}
