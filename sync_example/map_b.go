@@ -35,6 +35,7 @@ func NormalSafeMapTest() {
 	safeMap.Range(printMap)
 
 	safeMap.Clear()
+	fmt.Println("PrintRange")
 	safeMap.Range(printMap)
 
 }
