@@ -6,6 +6,7 @@ import (
 )
 
 var funcNames = []func(){
+	AfterFunc_A,
 	ToDo_A,
 	ToDo_B,
 	WithCancel_A,
@@ -26,3 +27,16 @@ func Run(funcName string) {
 	fn := funcNames[runKey]
 	fn()
 }
+
+
+// The context package in Go provides a way to carry deadlines, 
+// cancellation signals, and request-scoped values across API boundaries 
+// and between goroutines.
+
+// It’s mainly used to:
+
+// Control cancellation of goroutines (e.g., stop work if a client disconnects)
+
+// Set deadlines or timeouts for operations
+
+// Pass request-scoped data through function calls
