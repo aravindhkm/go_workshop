@@ -8,6 +8,7 @@ import (
 var funcNames = []func(){
 	CondOne,
 	Cond_Two,
+	Cond_Two_One,
 	CondThree,
 }
 

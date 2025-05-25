@@ -55,12 +55,12 @@ func (p *Producer) Produce(message string) {
 	defer p.cond.L.Unlock()
 
 	for p.messageChannel.IsFull() {
-		fmt.Println("Producer is waiting because the message channel is full")
+		fmt.Println("🚫 -> Producer is waiting because the message channel is full")
 		p.cond.Wait()
 	}
 
 	p.messageChannel.Add(message)
-	fmt.Println("Producer produced the message:", message)
+	fmt.Println("➡️  -> Producer produced the message:", message)
 
 	p.cond.Signal()
 }
@@ -86,13 +86,13 @@ func (c *Consumer) Consume() {
 	defer c.cond.L.Unlock()
 
 	for c.messageChannel.IsEmpty() {
-		fmt.Println("Consumer is waiting because the message channel is empty")
+		fmt.Println("⏸️ <Consumer is waiting because the message channel is empty")
 		c.cond.Wait()
 	}
 
 	message := c.messageChannel.Get()
 
-	fmt.Println("Consumer consumed the message:", message)
+	fmt.Println("⬅️ <Consumer consumed the message:", message)
 	c.cond.Signal()
 }
 
