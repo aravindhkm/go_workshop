@@ -10,6 +10,7 @@ var funcNames = []func(){
 	Cond_Two,
 	Cond_Two_One,
 	CondThree,
+	Cond_D_One,
 }
 
 // Run executes a function by key from the store

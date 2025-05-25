@@ -3,7 +3,6 @@ package syncexample
 import (
 	"fmt"
 	"sync"
-	"time"
 )
 
 type MessageChannel struct {
@@ -49,13 +48,15 @@ func NewProducer(cond *sync.Cond, messageChannel *MessageChannel) *Producer {
 }
 
 func (p *Producer) Produce(message string) {
-	time.Sleep(500 * time.Millisecond) // Simulating some work
+	// if you enable the time then it will run Simulating,
+	// there is no IsFull & IsEmpty will meet
+	// time.Sleep(500 * time.Millisecond) // Simulating some work
 
 	p.cond.L.Lock()
 	defer p.cond.L.Unlock()
 
 	for p.messageChannel.IsFull() {
-		fmt.Println("🚫 -> Producer is waiting because the message channel is full")
+		fmt.Println("⏸️ -> Producer is waiting because the message channel is full")
 		p.cond.Wait()
 	}
 
@@ -80,13 +81,15 @@ func NewConsumer(cId int, cond *sync.Cond, messageChannel *MessageChannel) *Cons
 }
 
 func (c *Consumer) Consume() {
-	time.Sleep(1 * time.Second) // Simulating some work
+	// if you enable the time then it will run Simulating,
+	// there is no IsFull & IsEmpty will meet
+	// time.Sleep(1 * time.Second) // Simulating some work
 
 	c.cond.L.Lock()
 	defer c.cond.L.Unlock()
 
 	for c.messageChannel.IsEmpty() {
-		fmt.Println("⏸️ <Consumer is waiting because the message channel is empty")
+		fmt.Println("🚫 <Consumer is waiting because the message channel is empty")
 		c.cond.Wait()
 	}
 
