@@ -13,7 +13,7 @@ var (
 	//mutex
 	countGuard sync.Mutex
 	//RWmutex
-	countRWGuard sync.Mutex
+	countRWGuard sync.RWMutex
 )
 
 type mutexMap map[string]string
@@ -41,10 +41,10 @@ type rwMutexMap map[string]string
 
 func (mapData *rwMutexMap) read() {
 	for {
-		countRWGuard.Lock()
+		countRWGuard.RLock()
 		var _ string = (*mapData)["name"]
 		count += 1
-		countRWGuard.Unlock()
+		countRWGuard.RUnlock()
 	}
 }
 
