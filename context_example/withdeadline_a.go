@@ -29,3 +29,15 @@ func WithDeadline_A() {
 		fmt.Println("Work completed successfully")
 	}
 }
+
+// context.WithDeadline(parent, deadline) creates a new context that
+// will be automatically canceled at the specified time.
+
+// defer cancel() ensures that resources are cleaned up even if the
+// deadline isn't hit.
+
+// ctx.Done() is a channel that is closed when the deadline expires
+// or the context is canceled manually.
+
+// ctx.Err() gives the reason for the cancellation (DeadlineExceeded
+// or Canceled).

@@ -11,6 +11,7 @@ var funcNames = []func(){
 	WithCancel_A,
 	WithCancel_B,
 	WithDeadline_A,
+	WithTimeout_A,
 	WithValue_A,
 }
 
