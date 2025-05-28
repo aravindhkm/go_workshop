@@ -6,6 +6,7 @@ import (
 )
 
 var funcNames = []func(){
+	JsonApi,
 	ReadJsonFile,
 	ReadJsonFileTwo,
 	WriteJsonExampleOne,
