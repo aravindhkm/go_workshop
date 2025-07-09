@@ -66,7 +66,7 @@ func CounterSemaphoreOne() {
 }
 
 
-// ✅ Why Use chan struct{} for Semaphores?
+// ✅ Why Use chan struct{}{} for Semaphores?
 // 1. Zero Memory Overhead
 // struct{} is the empty struct — it takes up zero bytes of memory.
 

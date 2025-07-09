@@ -26,6 +26,7 @@ import (
 	"WorkShop/variadic"
 	workerexample "WorkShop/worker_example"
 	"WorkShop/workout"
+	"WorkShop/zexecute"
 	"fmt"
 	"os"
 	"strings"
@@ -57,6 +58,7 @@ var runMap = map[string]func(string){
 	"context_example":  contextexample.Run,
 	"worker_example":   workerexample.Run,
 	"sync_example":     syncexample.Run,
+	"zexecute":         zexecute.Run,
 }
 
 func FindRunMap(pkgName string) func(string) {

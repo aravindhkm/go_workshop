@@ -20,5 +20,5 @@ func (d Day) String() string {
 
 func IotaExampleOne() {
     var today Day = Wednesday
-    fmt.Println(today.String()) // Output: Tuesday
+    fmt.Println(today.String()) // Output: Wednesday
 }

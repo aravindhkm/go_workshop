@@ -1,10 +1,8 @@
-package workout
+package interview
 
-import (
-	"fmt"
-)
+import "fmt"
 
-func DummyWorkOut() {
+func FindChar() {
 	str := "Hello3,  World!!123"
 
 	var vowels, spaces, specials, consonants int
@@ -25,5 +23,4 @@ func DummyWorkOut() {
 	}
 
 	fmt.Println("result", vowels, spaces, specials, consonants)
-	fmt.Println()
 }

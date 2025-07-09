@@ -57,3 +57,6 @@ func SemaphoreExampleOne() {
 	wg.Wait()
 	fmt.Println("All workers completed")
 }
+
+
+// Zero memory allocation: struct{} is an empty struct — it occupies 0 bytes.

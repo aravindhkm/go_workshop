@@ -6,6 +6,8 @@ import (
 )
 
 var funcNames = []func(){
+	FindChar,
+	FindCharDuplicate,
 	FindPairSumsOne,
 	PianoOne,
 	SecondLargetNumberOne,
