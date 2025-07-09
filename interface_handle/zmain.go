@@ -6,6 +6,7 @@ import (
 )
 
 var funcNames = []func(){
+	InterfaceFind,
 	ItrFive,
 	ItrFour,
 	ItrOne,
@@ -23,6 +24,7 @@ func Run(funcName string) {
 	if err != nil {
 		fmt.Printf("Error in %s: %s\n", currDir, err.Error())
 	}
+	// fmt.Println("runKey", runKey)
 	fn := funcNames[runKey]
 	fn()
 }

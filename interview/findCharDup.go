@@ -1,9 +1,18 @@
 package interview
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func findDupChar(itr []interface{}) []string {
 	result := []string{}
+
+	// for _, value := range itr {
+	// 	switch value.(Type) {
+	// 	case string:
+	// 	}
+	// 	fmt.Println(reflect.TypeOf(value))
+	// }
 
 	return result
 }
