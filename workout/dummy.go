@@ -4,26 +4,48 @@ import (
 	"fmt"
 )
 
-func DummyWorkOut() {
-	str := "Hello3,  World!!123"
+type Node struct {
+	Data     int
+	NextNode *Node
+}
 
-	var vowels, spaces, specials, consonants int
-
-	for _, ch := range str {
-		if (ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z') {
-			switch ch {
-			case 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U':
-				vowels++
-			default:
-				consonants++
+func (d *Node) Add(newVal int) {
+	if d.Data == 0 {
+		d.Data = newVal
+	} else {
+		for {
+			if d.NextNode == nil {
+				d.NextNode = &Node{Data: newVal}
+				break
+			} else {
+				d = d.NextNode
 			}
-		} else if ch == ' ' {
-			spaces++
+		}
+	}
+}
+
+func (d *Node) Get() {
+
+	for {
+		fmt.Println(d.Data)
+
+		if d.NextNode != nil {
+			d = d.NextNode
 		} else {
-			specials++
+			break
 		}
 	}
 
-	fmt.Println("result", vowels, spaces, specials, consonants)
+}
+
+func DummyWorkOut() {
+	linkedList := Node{Data: 1}
+
+	linkedList.Add(2)
+	linkedList.Add(3)
+	linkedList.Add(4)
+
+	linkedList.Get()
+
 	fmt.Println()
 }

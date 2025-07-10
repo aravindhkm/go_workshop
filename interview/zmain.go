@@ -9,6 +9,7 @@ var funcNames = []func(){
 	FindChar,
 	FindCharDuplicate,
 	FindPairSumsOne,
+	LinkedListExec,
 	PianoOne,
 	SecondLargetNumberOne,
 }

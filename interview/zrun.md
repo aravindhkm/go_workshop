@@ -9,13 +9,16 @@
  findPairSumsOne.go
  ./run.sh interview/ 3
 
- piano_one.go
+ linkedlist.go
  ./run.sh interview/ 4
 
- secondLargetNumberOne.go
+ piano_one.go
  ./run.sh interview/ 5
 
- zmain.go
+ secondLargetNumberOne.go
  ./run.sh interview/ 6
+
+ zmain.go
+ ./run.sh interview/ 7
 
 */
