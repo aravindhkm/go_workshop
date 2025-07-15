@@ -2,17 +2,27 @@ package interview
 
 import (
 	"fmt"
+	"strings"
+	// "reflect"
 )
 
 func findDupChar(itr []interface{}) []string {
 	result := []string{}
+	mapKey := map[string]bool{}
+	for _, value := range itr {
+		switch c := value.(type) {
+		case string:
+			mapKey[strings.ToLower(c)] = true
+		case map[string]string:
+			for _, val := range c {
+				mapKey[val] = true
+			}
+		}
+	}
 
-	// for _, value := range itr {
-	// 	switch value.(Type) {
-	// 	case string:
-	// 	}
-	// 	fmt.Println(reflect.TypeOf(value))
-	// }
+	for key := range mapKey {
+		result = append(result, key)
+	}
 
 	return result
 }

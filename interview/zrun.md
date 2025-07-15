@@ -18,7 +18,10 @@
  secondLargetNumberOne.go
  ./run.sh interview/ 6
 
- zmain.go
+ sum_value.go
  ./run.sh interview/ 7
+
+ zmain.go
+ ./run.sh interview/ 8
 
 */

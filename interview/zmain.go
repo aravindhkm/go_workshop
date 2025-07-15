@@ -6,11 +6,14 @@ import (
 )
 
 var funcNames = []func(){
+	FibTimePing,
+	Fibonacci,
 	FindChar,
 	FindCharDuplicate,
 	FindPairSumsOne,
 	LinkedListExec,
 	PianoOne,
+	ReverseIntAndSum,
 	SecondLargetNumberOne,
 }
 
@@ -25,3 +28,7 @@ func Run(funcName string) {
 	fn := funcNames[runKey]
 	fn()
 }
+
+/*
+./cmd.sh interview
+*/
