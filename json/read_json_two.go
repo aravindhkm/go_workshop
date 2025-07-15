@@ -28,3 +28,12 @@ func ReadJsonFileTwo(){
 
 	fmt.Println(result)
 }
+
+
+// | Aspect           | `ReadJsonFile`                    | `ReadJsonFileTwo`                       |
+// | ---------------- | --------------------------------- | --------------------------------------- |
+// | File read method | `os.ReadFile` (loads whole file)  | `os.Open` + `json.NewDecoder` (streams) |
+// | JSON parsing     | `json.Unmarshal`                  | `json.Decoder.Decode`                   |
+// | Tag usage        | ❌ No struct tags                 | ✅ Uses struct tags                      |
+// | Performance      | Better for **small files**        | Better for **large files**              |
+// | Flexibility      | Less flexible with JSON structure | More flexible due to tags               |
