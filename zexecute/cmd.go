@@ -9,6 +9,13 @@ import (
 // 	dir = dir[:len(dir)-1]
 
 func AddCmd(path string) {
+
+	// err := os.MkdirAll(path, os.ModePerm)
+	// if err != nil {
+	// 	fmt.Printf("Error creating directory: %v\n", err)
+	// 	return
+	// }
+
 	zrunFilePath := filepath.Join(path, "zrun.md")
 
 	// Create or overwrite zrun.md

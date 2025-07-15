@@ -35,17 +35,16 @@ func (d *Node) Get() {
 			break
 		}
 	}
-
 }
 
 func DummyWorkOut() {
-	linkedList := Node{Data: 1}
+	// linkedList := Node{Data: 1}
 
-	linkedList.Add(2)
-	linkedList.Add(3)
-	linkedList.Add(4)
+	// linkedList.Add(2)
+	// linkedList.Add(3)
+	// linkedList.Add(4)
 
-	linkedList.Get()
+	// linkedList.Get()
 
 	fmt.Println()
 }

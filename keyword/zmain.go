@@ -27,6 +27,7 @@ var funcNames = []func(){
 	StringImmutable,
 	StructExampleOne,
 	SwapTwoNumberExecute,
+	TypeInt,
 }
 
 // Run executes a function by key from the store

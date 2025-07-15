@@ -14,6 +14,7 @@ var funcNames = []func(){
 	ItrSix,
 	ItrThree,
 	ItrTwo,
+	ItrTypeFind,
 }
 
 // Run executes a function by key from the store

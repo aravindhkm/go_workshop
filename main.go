@@ -26,7 +26,7 @@ func main() {
 
 	if len(os.Args) >= 3 {
 		funcName = os.Args[2]
-		if pkgName != "zexecute" && strings.Contains(funcName, "l") {
+		if pkgName != "zexecute/" && strings.Contains(funcName, "l") {
 			config.SetReverse(true)
 			funcName = strings.ReplaceAll(funcName, "l", "")
 		}
