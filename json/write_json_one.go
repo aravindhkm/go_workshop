@@ -7,14 +7,14 @@ import (
 )
 
 type WriteJsonStruct struct {
-	Data int `json:"data"`
+	Data    int    `json:"data"`
 	Message string `json:"message"`
-	Result string `json:"result"`
+	Result  string `json:"result"`
 }
 
 func WriteJsonExampleOne() {
 
-	op := WriteJsonStruct{200,"Successfully writed", "Hello Aravindh!"}
+	op := WriteJsonStruct{200, "Successfully writed", "Hello Aravindh!"}
 
 	data, err := json.Marshal(op)
 
@@ -25,7 +25,7 @@ func WriteJsonExampleOne() {
 
 	os.WriteFile("output.json", data, perm)
 
-	fmt.Println("op",op)
+	fmt.Println("op", op)
 
 }
 
@@ -38,3 +38,13 @@ func WriteJsonExampleOne() {
 // 5 means read and execute permissions.
 // 6 means read and write permissions.
 // 7 means read, write, and execute permissions.
+
+// It's a Unix-style file permission:
+
+// 0: special indicator for octal
+
+// 6: owner can read and write (4+2)
+
+// 4: group can read
+
+// 4: others can read
