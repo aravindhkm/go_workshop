@@ -13,6 +13,7 @@ var funcNames = []func(){
 	FindCharDuplicate,
 	FindPairSumsOne,
 	LinkedListExec,
+	Palindrome_One,
 	PianoOne,
 	ReverseIntAndSum,
 	SecondLargetNumberOne,
@@ -31,6 +32,6 @@ func Run(funcName string) {
 }
 
 /*
-./run.sh interview 
+./run.sh interview
 ./cmd.sh interview
 */
