@@ -7,6 +7,7 @@ import (
 
 var funcNames = []func(){
 	AnagramOne,
+	BiMapOne,
 	FacOne,
 	FibTimePing,
 	Fibonacci,

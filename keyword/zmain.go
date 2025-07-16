@@ -27,6 +27,7 @@ var funcNames = []func(){
 	StringImmutable,
 	StructExampleOne,
 	SwapTwoNumberExecute,
+	TypeAll,
 	TypeInt,
 }
 
@@ -41,3 +42,9 @@ func Run(funcName string) {
 	fn := funcNames[runKey]
 	fn()
 }
+
+/*
+
+./cmd.sh keyword
+
+*/

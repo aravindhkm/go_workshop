@@ -63,10 +63,13 @@
  swap_two_numner.go
  ./run.sh keyword/ 21
 
- type_int.go
+ type_all.go
  ./run.sh keyword/ 22
 
- zmain.go
+ type_int.go
  ./run.sh keyword/ 23
+
+ zmain.go
+ ./run.sh keyword/ 24
 
 */
