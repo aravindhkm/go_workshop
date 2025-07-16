@@ -6,14 +6,14 @@ import (
 )
 
 func isPrime(data int) bool {
-	if data <1 {
+	if data < 1 {
 		return true
 	}
 
 	sqrt := int(math.Sqrt(float64(data)))
-
-	for i:=2; i<=sqrt; i++ {
-		if data % i == 0 {
+	// fmt.Println("sqrt", sqrt) // 9 sqrt is 3
+	for i := 2; i <= sqrt; i++ {
+		if data%i == 0 {
 			return false
 		}
 	}
