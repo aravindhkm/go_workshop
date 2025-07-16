@@ -6,8 +6,9 @@ import (
 )
 
 var funcNames = []func(){
-	ExampleOne,
-	ExampleTwo,
+	ComparableOne,
+	ComparableTwo,
+	GenericOne,
 }
 
 // Run executes a function by key from the store

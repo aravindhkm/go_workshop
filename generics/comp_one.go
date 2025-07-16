@@ -6,7 +6,7 @@ func Comp[T comparable] (t1 T,t2 T) bool {
 	return t1 == t2
 }
 
-func ExampleTwo() {
+func ComparableOne() {
 	fmt.Println("Print", Comp(1, 1.1))
 }
 

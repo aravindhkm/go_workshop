@@ -15,7 +15,7 @@ func GenericExampleOne[T ITF] (data []T){
 	}
 }
 
-func ExampleOne() {
+func GenericOne() {
 	var params []ITF = []ITF{
 		4,5,"atetet",
 	}
