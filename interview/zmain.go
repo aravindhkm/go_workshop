@@ -6,6 +6,7 @@ import (
 )
 
 var funcNames = []func(){
+	FacOne,
 	FibTimePing,
 	Fibonacci,
 	FindChar,
@@ -30,5 +31,6 @@ func Run(funcName string) {
 }
 
 /*
+./run.sh interview 
 ./cmd.sh interview
 */
