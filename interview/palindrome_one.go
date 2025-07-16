@@ -3,9 +3,15 @@ package interview
 import "fmt"
 
 func PalinGet(n int) bool {
-	return  false
+
+	return false
 }
 
 func Palindrome_One() {
-	fmt.Println("Palindrome")
+
+	testcase := []int{121, 135, 272}
+
+	for _, value := range testcase {
+		fmt.Println("Palindrome", PalinGet(value))
+	}
 }
