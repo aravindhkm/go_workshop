@@ -6,6 +6,7 @@ import (
 )
 
 var funcNames = []func(){
+	InterfaceBasicExample,
 	InterfaceFind,
 	ItrFive,
 	ItrFour,
