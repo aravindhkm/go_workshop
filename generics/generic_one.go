@@ -5,23 +5,24 @@ import (
 	"reflect"
 )
 
-type ITF interface {}
+type ITF interface{}
 
-func GenericExampleOne[T ITF] (data []T){
+func GenericExampleOne[T ITF](data []T) {
 	for index, value := range data {
 		fmt.Println("index", index)
-		fmt.Println("index", reflect.TypeOf(value))
+		fmt.Println("reflect type", reflect.TypeOf(value))
+		// fmt.Println("interface type", value.(type))
 
 	}
 }
 
 func GenericOne() {
 	var params []ITF = []ITF{
-		4,5,"atetet",
+		4, 5, "atetet",
 	}
 
 	GenericExampleOne(params)
 
-	// var params []interface{} = []interface{}{4,5,"23434"}
-	fmt.Println("params",params)
+	var paramstwo []interface{} = []interface{}{4, 5, "23434"}
+	fmt.Println("params", params, paramstwo)
 }
