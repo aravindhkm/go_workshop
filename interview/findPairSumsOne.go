@@ -21,7 +21,7 @@ func FindPairSumsOne() {
 	pairSums := findPairSums(nums)
 
 	for i, pairSum := range pairSums {
-		if len(pairSum) > 1 {
+		if len(pairSum) > 3 {
 			fmt.Println(i, pairSum)
 		}
 

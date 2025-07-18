@@ -1,39 +1,54 @@
 /*
 
- factorial_one.go
+ anagram_one.go
  ./run.sh interview/ 1
 
- fib_time_ping.go
+ bi_map_one.go
  ./run.sh interview/ 2
 
- fibonacci.go
+ bi_map_two.go
  ./run.sh interview/ 3
 
- findChar.go
+ count_word.go
  ./run.sh interview/ 4
 
- findCharDup.go
+ factorial_one.go
  ./run.sh interview/ 5
 
- findPairSumsOne.go
+ fib_time_ping.go
  ./run.sh interview/ 6
 
- linkedlist.go
+ fibonacci.go
  ./run.sh interview/ 7
 
- palindrome_one.go
+ findChar.go
  ./run.sh interview/ 8
 
- piano_one.go
+ findCharDup.go
  ./run.sh interview/ 9
 
- reverse_int_sum.go
+ findPairSumsOne.go
  ./run.sh interview/ 10
 
- secondLargetNumberOne.go
+ linkedlist.go
  ./run.sh interview/ 11
 
- zmain.go
+ odd_even.go
  ./run.sh interview/ 12
+
+ palindrome_one.go
+ ./run.sh interview/ 13
+
+ piano_one.go
+ ./run.sh interview/ 14
+
+ reverse_int_sum.go
+ ./run.sh interview/ 15
+
+ secondLargetNumberOne.go
+ ./run.sh interview/ 16
+
+ zmain.go
+ ./run.sh interview/ 17
 
 */
