@@ -9,6 +9,7 @@ var funcNames = []func(){
 	AnagramOne,
 	BiMapOne,
 	BiMapTwo,
+	CountWord,
 	FacOne,
 	FibTimePing,
 	Fibonacci,
