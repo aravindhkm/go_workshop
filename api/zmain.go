@@ -12,6 +12,7 @@ var funcNames = []func(){
 	GinExampleTwo,
 	GinExampleThree,
 	HttpApiOne,
+	HttpApiOneTwo,
 }
 
 // Run executes a function by key from the store
