@@ -31,6 +31,8 @@ func InterfaceBasicExample() {
 	dog := &Dog{}
 	cat := Cat{}
 
+	// ptr := Speaker(dog)
+
 	fmt.Println("dog before", dog.Text)
 	PrintSound(dog)
 	PrintSound(&cat)

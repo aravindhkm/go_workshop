@@ -16,6 +16,7 @@ var funcNames = []func(){
 	FindCharDuplicate,
 	FindPairSumsOne,
 	LinkedListExec,
+	OddEvenFind,
 	Palindrome_One,
 	PianoOne,
 	ReverseIntAndSum,

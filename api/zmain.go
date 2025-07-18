@@ -10,6 +10,7 @@ const MyExportedVar = "I am accessible"
 var funcNames = []func(){
 	GinExampleOne,
 	GinExampleTwo,
+	GinExampleThree,
 	HttpApiOne,
 }
 
