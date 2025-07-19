@@ -9,7 +9,6 @@ import (
 // 	dir = dir[:len(dir)-1]
 
 func AddCmd(path string) {
-
 	// err := os.MkdirAll(path, os.ModePerm)
 	// if err != nil {
 	// 	fmt.Printf("Error creating directory: %v\n", err)

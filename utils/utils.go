@@ -18,6 +18,7 @@ import (
 	"WorkShop/mapping"
 	"WorkShop/pkg"
 	"WorkShop/problem"
+	ratelimit "WorkShop/rate_limit"
 	"WorkShop/routine"
 	"WorkShop/sort"
 	syncexample "WorkShop/sync_example"
@@ -48,6 +49,7 @@ var runMap = map[string]func(string){
 	"http_handle":      httphandle.Run,
 	"task":             task.Run,
 	"problem":          problem.Run,
+	"rate_limit":        ratelimit.Run,
 	"routine":          routine.Run,
 	"interview":        interview.Run,
 	"pkg":              pkg.Run,
