@@ -6,6 +6,7 @@ import (
 )
 
 var funcNames = []func(){
+	BenchmarkOne,
 	BufferChannelOne,
 	BufferChannelTwo,
 	ChannelDirection,
@@ -14,6 +15,7 @@ var funcNames = []func(){
 	GR_CH_Simple,
 	Gr_Simple_Sleep,
 	Gr_Simple_Sleep_Two,
+	OsThreadOne,
 	ParallelismOne,
 	ParallelismExampleTwo,
 	ParallelismExampleThree,

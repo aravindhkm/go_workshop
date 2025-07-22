@@ -24,28 +24,31 @@
  gr_simple_slp2.go
  ./run.sh concurrency/ 8
 
- parallelism_1.go
+ os_thread_1.go
  ./run.sh concurrency/ 9
 
- parallelism_2.go
+ parallelism_1.go
  ./run.sh concurrency/ 10
 
- parallelism_3.go
+ parallelism_2.go
  ./run.sh concurrency/ 11
 
- semaphore_1.go
+ parallelism_3.go
  ./run.sh concurrency/ 12
 
- weather_api_gr.go
+ semaphore_1.go
  ./run.sh concurrency/ 13
 
- weather_api_normal.go
+ weather_api_gr.go
  ./run.sh concurrency/ 14
 
- wg_lock_1.go
+ weather_api_normal.go
  ./run.sh concurrency/ 15
 
- zmain.go
+ wg_lock_1.go
  ./run.sh concurrency/ 16
+
+ zmain.go
+ ./run.sh concurrency/ 17
 
 */
