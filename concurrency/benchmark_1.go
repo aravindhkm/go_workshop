@@ -14,6 +14,7 @@ func cpuTask(id int) {
 	}
 }
 
+
 func runBenchmark(threadCount int) time.Duration {
 	runtime.GOMAXPROCS(threadCount)
 	start := time.Now()
