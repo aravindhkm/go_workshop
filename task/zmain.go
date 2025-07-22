@@ -13,6 +13,7 @@ var funcNames = []func(){
 	AddEvenMoreOne,
 	UnionIntersectExecute,
 	FibonacciOne,
+	FibonacciTwo,
 	FindChar,
 	FindMissingNumberInUnsortedArray,
 	GarbageExecute,

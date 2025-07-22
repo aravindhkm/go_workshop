@@ -15,6 +15,7 @@ func printFibOne(outCh chan int, quit chan bool) {
 		}
 	}
 }
+
 func FibonacciOne() {
 	outCh := make(chan int)
 	quit := make(chan bool)
