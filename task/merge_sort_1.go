@@ -33,10 +33,12 @@ func merge(left, right []int) []int {
 			result = append(result, right[j])
 			j++
 		} else {
-			result = append(result, left[j])
+			result = append(result, left[i])
 			i++
 		}
 	}
+	result = append(result, left[i:]...)
+	result = append(result, right[j:]...)
 
 	return result
 }
@@ -54,11 +56,9 @@ func mergeSort(input []int) []int {
 
 func MergeSortOne() {
 	input := []int{2, 1, 5, 3, 7, 8}
-	reverseResult := reverse(input)
-	fmt.Println("reverse", reverseResult)
+	// reverseResult := reverse(input)
+	// fmt.Println("reverse", reverseResult)
 
 	mergeResult := mergeSort(input)
-	fmt.Println("mergeResult",mergeResult)
-
-	fmt.Println("merge sort")
+	fmt.Println("mergeResult", mergeResult)
 }
