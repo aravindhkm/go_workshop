@@ -6,55 +6,58 @@
  add_even_goroutine_main.go
  ./run.sh task/ 2
 
- add_even_linear_one.go
+ add_even_linear_1.go
  ./run.sh task/ 3
 
- add_even_linear_two.go
+ add_even_linear_2.go
  ./run.sh task/ 4
 
- add_even_more_one.go
+ add_even_linear_3.go
  ./run.sh task/ 5
 
- array_union_intersect.go
+ add_even_more_one.go
  ./run.sh task/ 6
 
- fibonacci_1.go
+ array_union_intersect.go
  ./run.sh task/ 7
 
- fibonacci_2.go
+ fibonacci_1.go
  ./run.sh task/ 8
 
- find_char.go
+ fibonacci_2.go
  ./run.sh task/ 9
 
- find_miss_num_arr.go
+ find_char.go
  ./run.sh task/ 10
 
- garbage.go
+ find_miss_num_arr.go
  ./run.sh task/ 11
 
- inventory.go
+ garbage.go
  ./run.sh task/ 12
 
- merge_sort_1.go
+ inventory.go
  ./run.sh task/ 13
 
- prime_num_one.go
+ merge_sort_1.go
  ./run.sh task/ 14
 
- queue_one.go
+ prime_num_one.go
  ./run.sh task/ 15
 
- remove_zero_from_arr.go
+ queue_one.go
  ./run.sh task/ 16
 
- select_example.go
+ remove_zero_from_arr.go
  ./run.sh task/ 17
 
- stack_one.go
+ select_example.go
  ./run.sh task/ 18
 
- zmain.go
+ stack_one.go
  ./run.sh task/ 19
+
+ zmain.go
+ ./run.sh task/ 20
 
 */

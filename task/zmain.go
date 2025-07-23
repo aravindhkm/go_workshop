@@ -10,6 +10,7 @@ var funcNames = []func(){
 	PrintAddEvenGoRoutine,
 	AddEvenLinerOne,
 	AddEvenLinerTwo,
+	AddEvenLinerThree,
 	AddEvenMoreOne,
 	UnionIntersectExecute,
 	FibonacciOne,
