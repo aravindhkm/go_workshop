@@ -1,6 +1,8 @@
 package task
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func reverseOwn(input []int) []int {
 	mid := len(input) / 2
@@ -39,17 +41,24 @@ func merge(left, right []int) []int {
 	return result
 }
 
-func mergeSort(input []int) {
-	mid := len(input) / 2
-	for mid != 0 {
-		left, right := merge(input[mid:], input[:mid])
+func mergeSort(input []int) []int {
+	if len(input) <= 1 {
+		return input
 	}
+	mid := len(input) / 2
+	left := mergeSort(input[mid:])
+	right := mergeSort(input[:mid])
+
+	return merge(left, right)
 }
 
 func MergeSortOne() {
 	input := []int{2, 1, 5, 3, 7, 8}
 	reverseResult := reverse(input)
 	fmt.Println("reverse", reverseResult)
+
+	mergeResult := mergeSort(input)
+	fmt.Println("mergeResult",mergeResult)
 
 	fmt.Println("merge sort")
 }
