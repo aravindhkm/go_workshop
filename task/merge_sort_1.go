@@ -23,12 +23,27 @@ func reverse(input []int) []int {
 	return input
 }
 
-func merge() {
+func merge(left, right []int) ([]int, []int) {
+	if len(left) == 0 || len(right) == 0 {
+		return left, right
+	}
 
+	i, j := 0, 0
+	for i < len(left) && j < len(right) {
+		if left[i] > left[j] {
+			left[j] = left[i]
+			j++
+		} else {
+			left[i] = left[j]
+			i++
+		}
+	}
+
+	return left, right
 }
 
 func mergeSort(input []int) {
-
+	
 }
 
 func MergeSortOne() {
