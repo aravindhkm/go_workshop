@@ -25,7 +25,6 @@ func (d *Node) Add(newVal int) {
 }
 
 func (d *Node) Get() {
-
 	for {
 		fmt.Println(d.Data)
 

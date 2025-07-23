@@ -18,6 +18,7 @@ var funcNames = []func(){
 	FindMissingNumberInUnsortedArray,
 	GarbageExecute,
 	InventoryExecute,
+	MergeSortOne,
 	PrimeNumOne,
 	QueueOne,
 	RemoveZeroFromArray,

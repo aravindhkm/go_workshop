@@ -36,22 +36,25 @@
  inventory.go
  ./run.sh task/ 12
 
- prime_num_one.go
+ merge_sort_1.go
  ./run.sh task/ 13
 
- queue_one.go
+ prime_num_one.go
  ./run.sh task/ 14
 
- remove_zero_from_arr.go
+ queue_one.go
  ./run.sh task/ 15
 
- select_example.go
+ remove_zero_from_arr.go
  ./run.sh task/ 16
 
- stack_one.go
+ select_example.go
  ./run.sh task/ 17
 
- zmain.go
+ stack_one.go
  ./run.sh task/ 18
+
+ zmain.go
+ ./run.sh task/ 19
 
 */

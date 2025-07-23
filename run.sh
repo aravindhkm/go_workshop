@@ -10,7 +10,7 @@ if [ $# -eq 0 ]; then
 fi
 
 # Clear the terminal screen
-# clear
+clear
 
 # Add a few empty lines after the clear command
 echo -e "\n"
