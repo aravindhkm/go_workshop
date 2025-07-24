@@ -19,6 +19,7 @@ var funcNames = []func(){
 	MapKey,
 	PtrOne,
 	PtrTwo,
+	RecoverCh,
 	RecoverExampleOne,
 	RuneExampleOne,
 	SelectOne,

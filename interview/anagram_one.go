@@ -37,8 +37,13 @@ func findAnagram(s, t string) bool {
 	count := [26]int{}
 
 	for i := 0; i < len(s); i++ {
+		fmt.Println("", s[i], s[i]-'a')
+
 		count[s[i]-'a']++
 		count[t[i]-'a']--
+
+		// count[s[i]-'a']++
+		// count[t[i]-'a']--
 
 		// fmt.Println(count[s[i]-'a'], count[t[i]-'a'])
 	}
