@@ -30,25 +30,28 @@
  findPairSumsOne.go
  ./run.sh interview/ 10
 
- linkedlist.go
+ inheritence_1.go
  ./run.sh interview/ 11
 
- odd_even.go
+ linkedlist.go
  ./run.sh interview/ 12
 
- palindrome_one.go
+ odd_even.go
  ./run.sh interview/ 13
 
- piano_one.go
+ palindrome_one.go
  ./run.sh interview/ 14
 
- reverse_int_sum.go
+ piano_one.go
  ./run.sh interview/ 15
 
- secondLargetNumberOne.go
+ reverse_int_sum.go
  ./run.sh interview/ 16
 
- zmain.go
+ secondLargetNumberOne.go
  ./run.sh interview/ 17
+
+ zmain.go
+ ./run.sh interview/ 18
 
 */
