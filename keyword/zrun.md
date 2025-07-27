@@ -42,34 +42,37 @@
  recover.go
  ./run.sh keyword/ 14
 
- rune.go
+ recover_ch.go
  ./run.sh keyword/ 15
 
- select_one.go
+ rune.go
  ./run.sh keyword/ 16
 
- slice.go
+ select_one.go
  ./run.sh keyword/ 17
 
- slice_cap.go
+ slice.go
  ./run.sh keyword/ 18
 
- string_immutable.go
+ slice_cap.go
  ./run.sh keyword/ 19
 
- struct_one.go
+ string_immutable.go
  ./run.sh keyword/ 20
 
- swap_two_numner.go
+ struct_one.go
  ./run.sh keyword/ 21
 
- type_all.go
+ swap_two_numner.go
  ./run.sh keyword/ 22
 
- type_int.go
+ type_all.go
  ./run.sh keyword/ 23
 
- zmain.go
+ type_int.go
  ./run.sh keyword/ 24
+
+ zmain.go
+ ./run.sh keyword/ 25
 
 */
