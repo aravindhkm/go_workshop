@@ -6,7 +6,7 @@ import "fmt"
 func executePanic() {
 	fmt.Println("before panic")
 	panic("Panic executed successfully")
-	fmt.Println("after panic")
+	fmt.Println("after panic") // it will not execute
 }
 
 func recoverExecute() {
@@ -20,6 +20,8 @@ func recoverExecute() {
 
 func RecoverExampleOne() {
 	recoverExecute()
+
+	for{}
 }
 
 // negative scenario

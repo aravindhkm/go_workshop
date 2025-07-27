@@ -39,10 +39,10 @@
  ptrTwo.go
  ./run.sh keyword/ 13
 
- recover.go
+ recover_1.go
  ./run.sh keyword/ 14
 
- recover_ch.go
+ recover_2.go
  ./run.sh keyword/ 15
 
  rune.go
