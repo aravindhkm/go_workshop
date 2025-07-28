@@ -44,7 +44,7 @@ func AddCmd(path string) {
 			continue
 		}
 
-		// fmt.Println("file name", file)
+		fmt.Println(file, index + 1)
 
 		// Relative file path
 		// relPath := filepath.Join(filepath.Base(path), file.Name())
