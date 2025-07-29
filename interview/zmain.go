@@ -17,6 +17,7 @@ var funcNames = []func(){
 	FindChar,
 	FindCharDuplicate,
 	FindPairSumsOne,
+	GenericChOne,
 	InheritenceOne,
 	LinkedListExec,
 	OddEvenFind,
