@@ -9,49 +9,58 @@
  bi_map_two.go
  ./run.sh interview/ 3
 
- count_word.go
+ clock_angle.go
  ./run.sh interview/ 4
 
- factorial_one.go
+ count_word.go
  ./run.sh interview/ 5
 
- fib_time_ping.go
+ factorial_one.go
  ./run.sh interview/ 6
 
- fibonacci.go
+ fib_time_ping.go
  ./run.sh interview/ 7
 
- findChar.go
+ fibonacci.go
  ./run.sh interview/ 8
 
- findCharDup.go
+ findChar.go
  ./run.sh interview/ 9
 
- findPairSumsOne.go
+ findCharDup.go
  ./run.sh interview/ 10
 
- inheritence_1.go
+ findPairSumsOne.go
  ./run.sh interview/ 11
 
- linkedlist.go
+ generic_ch.go
  ./run.sh interview/ 12
 
- odd_even.go
+ inheritence_1.go
  ./run.sh interview/ 13
 
- palindrome_one.go
+ linkedlist.go
  ./run.sh interview/ 14
 
- piano_one.go
+ odd_even.go
  ./run.sh interview/ 15
 
- reverse_int_sum.go
+ palindrome_one.go
  ./run.sh interview/ 16
 
- secondLargetNumberOne.go
+ piano_one.go
  ./run.sh interview/ 17
 
- zmain.go
+ reverse_int_sum.go
  ./run.sh interview/ 18
+
+ secondLargetNumberOne.go
+ ./run.sh interview/ 19
+
+ sqrt_sort.go
+ ./run.sh interview/ 20
+
+ zmain.go
+ ./run.sh interview/ 21
 
 */
