@@ -5,24 +5,29 @@ import (
 	"sync"
 )
 
-func genericSample[T int, B string](intVal T, strVal B) {
-	fmt.Println(intVal, strVal)
-}
-
 func genericCh[I chan int, S chan string, B chan bool, R chan any](iCh I, sCh S, bCh B, resultCh R, wg *sync.WaitGroup) {
 	defer wg.Done()
-	// for intData := range iCh {
-	// 	resultCh <- intData
-	// }
+	for intData := range iCh {
+		resultCh <- intData
+	}
 
-	for range 5 {
-		resultCh <- <-iCh
+	for intData := range sCh {
+		resultCh <- intData
+	}
+
+	for intData := range bCh {
+		resultCh <- intData
 	}
 }
 
-func GenericChOne() {
-	genericSample(5, "hello world")
+func printResultValue(resultCh chan any) {
+	for value := range resultCh {
+		fmt.Println(value)
+	}
+	close(resultCh)
+}
 
+func GenericChOne() {
 	intCh := make(chan int)
 	strCh := make(chan string)
 	boolCh := make(chan bool)
@@ -32,19 +37,23 @@ func GenericChOne() {
 
 	wg.Add(1)
 	go genericCh(intCh, strCh, boolCh, resultCh, wg)
+	go printResultValue(resultCh)
 
 	for value := range 5 {
 		intCh <- value
 	}
+	close(intCh)
 
 	for range 5 {
-		fmt.Println("resultCh", <-resultCh)
+		strCh <- "feinfeih"
 	}
-	// for result := range resultCh {
-	// 	fmt.Println("resultCh", result)
-	// }
+	close(strCh)
+	
+	for range 5 {
+		boolCh <- true
+	}
+	close(boolCh)
 
-	// close(resultCh)
 	wg.Wait()
 	fmt.Println("")
 }
