@@ -27,6 +27,8 @@ var funcNames = []func(){
 	PianoOne,
 	ReverseIntAndSum,
 	SecondLargetNumberOne,
+	Signal,
+	SqrtSort,
 }
 
 // Run executes a function by key from the store
