@@ -27,7 +27,8 @@ var funcNames = []func(){
 	PianoOne,
 	ReverseIntAndSum,
 	SecondLargetNumberOne,
-	Signal,
+	SignalOne,
+	SignalTwo,
 	SqrtSort,
 }
 

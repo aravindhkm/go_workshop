@@ -19,7 +19,7 @@ func printSignal(currDir, nextDir chan struct{}, dirName string, wg *sync.WaitGr
 	}
 }
 
-func Signal() {
+func SignalOne() {
 	northCh := make(chan struct{})
 	eastCh := make(chan struct{})
 	westCh := make(chan struct{})
