@@ -11,6 +11,7 @@ var funcNames = []func(){
 	BiMapTwo,
 	ClockAngle,
 	CountWord,
+	DeadLockOne,
 	FacOne,
 	FibTimePing,
 	Fibonacci,

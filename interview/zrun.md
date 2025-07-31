@@ -15,52 +15,55 @@
  count_word.go
  ./run.sh interview/ 5
 
- factorial_one.go
+ deadlock_1.go
  ./run.sh interview/ 6
 
- fib_time_ping.go
+ factorial_one.go
  ./run.sh interview/ 7
 
- fibonacci.go
+ fib_time_ping.go
  ./run.sh interview/ 8
 
- findChar.go
+ fibonacci.go
  ./run.sh interview/ 9
 
- findCharDup.go
+ findChar.go
  ./run.sh interview/ 10
 
- findPairSumsOne.go
+ findCharDup.go
  ./run.sh interview/ 11
 
- generic_ch.go
+ findPairSumsOne.go
  ./run.sh interview/ 12
 
- inheritence_1.go
+ generic_ch.go
  ./run.sh interview/ 13
 
- linkedlist.go
+ inheritence_1.go
  ./run.sh interview/ 14
 
- odd_even.go
+ linkedlist.go
  ./run.sh interview/ 15
 
- palindrome_one.go
+ odd_even.go
  ./run.sh interview/ 16
 
- piano_one.go
+ palindrome_one.go
  ./run.sh interview/ 17
 
- reverse_int_sum.go
+ piano_one.go
  ./run.sh interview/ 18
 
- secondLargetNumberOne.go
+ reverse_int_sum.go
  ./run.sh interview/ 19
 
- sqrt_sort.go
+ secondLargetNumberOne.go
  ./run.sh interview/ 20
 
- zmain.go
+ sqrt_sort.go
  ./run.sh interview/ 21
+
+ zmain.go
+ ./run.sh interview/ 22
 
 */
