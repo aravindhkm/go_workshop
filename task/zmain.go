@@ -21,6 +21,7 @@ var funcNames = []func(){
 	InventoryExecute,
 	MergeSortOne,
 	PrimeNumOne,
+	ProfitStockOne,
 	QueueOne,
 	RemoveZeroFromArray,
 	SelectFibonacciExample,

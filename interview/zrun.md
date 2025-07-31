@@ -63,13 +63,19 @@
  secondLargetNumberOne.go
  ./run.sh interview/ 21
 
- signal.go
+ signal_1.go
  ./run.sh interview/ 22
 
- sqrt_sort.go
+ singal_2.go
  ./run.sh interview/ 23
 
- zmain.go
+ sqrt_sort.go
  ./run.sh interview/ 24
+
+ two_sum_arr_1.go
+ ./run.sh interview/ 25
+
+ zmain.go
+ ./run.sh interview/ 26
 
 */
