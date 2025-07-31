@@ -36,34 +36,37 @@
  findPairSumsOne.go
  ./run.sh interview/ 12
 
- generic_ch.go
+ generic_ch_1.go
  ./run.sh interview/ 13
 
- inheritence_1.go
+ generic_ch_2.go
  ./run.sh interview/ 14
 
- linkedlist.go
+ inheritence_1.go
  ./run.sh interview/ 15
 
- odd_even.go
+ linkedlist.go
  ./run.sh interview/ 16
 
- palindrome_one.go
+ odd_even.go
  ./run.sh interview/ 17
 
- piano_one.go
+ palindrome_one.go
  ./run.sh interview/ 18
 
- reverse_int_sum.go
+ piano_one.go
  ./run.sh interview/ 19
 
- secondLargetNumberOne.go
+ reverse_int_sum.go
  ./run.sh interview/ 20
 
- sqrt_sort.go
+ secondLargetNumberOne.go
  ./run.sh interview/ 21
 
- zmain.go
+ sqrt_sort.go
  ./run.sh interview/ 22
+
+ zmain.go
+ ./run.sh interview/ 23
 
 */
