@@ -69,3 +69,6 @@ func GenericChTwo() {
 		fmt.Printf("Received: %v (%T)\n", val, val)
 	}
 }
+
+// any is not a magic type like Object in Java or dynamic in Python
+// — it's still statically typed and behaves exactly like interface{}
