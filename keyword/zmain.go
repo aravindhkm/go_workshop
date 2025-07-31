@@ -6,6 +6,7 @@ import (
 )
 
 var funcNames = []func(){
+	AnyOne,
 	ReferenceOrValue,
 	ArrayTest,
 	ByteOne,
