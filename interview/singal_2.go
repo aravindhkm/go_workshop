@@ -8,9 +8,9 @@ import (
 func northSignal(northCh chan struct{}, westCh chan struct{}, wg *sync.WaitGroup) {
 	defer wg.Done()
 	for range 12 {
+		fmt.Println("North Passed")
 		northCh <- struct{}{}
 		<-westCh
-		fmt.Println("North Passed")
 
 	}
 }
@@ -19,7 +19,7 @@ func eastSignal(eastCh chan struct{}, northCh chan struct{}, wg *sync.WaitGroup)
 	defer wg.Done()
 	for range 12 {
 		<-northCh
-		fmt.Println("North Passed")
+		fmt.Println("East Passed")
 		eastCh <- struct{}{}
 	}
 }
@@ -28,7 +28,7 @@ func westSignal(westCh chan struct{}, eastCh chan struct{}, wg *sync.WaitGroup) 
 	defer wg.Done()
 	for range 12 {
 		<-eastCh
-		fmt.Println("East Passed")
+		fmt.Println("West Passed")
 		westCh <- struct{}{}
 	}
 }
