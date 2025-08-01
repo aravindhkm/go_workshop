@@ -35,6 +35,11 @@ func MakeVsNewExampleOne() {
 	slice[2] = 30
 	fmt.Println("Slice:", slice)
 
+	m := new(map[string]int)
+	// (*m)["one"] = 1           // ❌ panic: assignment to entry in nil map
+	*m = make(map[string]int) // initialize the actual map
+	(*m)["one"] = 1
+
 	// Create a map from string to int
 	dictionary := make(map[string]int)
 	dictionary["apple"] = 3
