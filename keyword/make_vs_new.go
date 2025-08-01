@@ -12,8 +12,8 @@ func MakeVsNewExampleOne() {
 
 	copyP1 := p1
 	copyP1.Name = "Bob"
-	
-	p2 := Person{"Aravind"} 
+
+	p2 := Person{"Aravind"}
 	p2.Name = "Alice"
 
 	copyP2 := p2
@@ -21,12 +21,12 @@ func MakeVsNewExampleOne() {
 
 	fmt.Println("p1", p1)
 	fmt.Println("p2", p2)
-
+	fmt.Println("copyP2", copyP2)
 
 	numPtr := new(int)
 	fmt.Println("Value of numPtr before assignment:", *numPtr) // Output: 0 (zero-initialized)
 	*numPtr = 42
-	fmt.Println("Value of numPtr after assignment:", *numPtr)  // Output: 42
+	fmt.Println("Value of numPtr after assignment:", *numPtr) // Output: 42
 
 	// Create a slice of int with length 3
 	slice := make([]int, 3)
@@ -41,3 +41,11 @@ func MakeVsNewExampleOne() {
 	dictionary["banana"] = 5
 	fmt.Println("Map:", dictionary)
 }
+
+// | Feature       | `make`                                             | `new`                                             |
+// | ------------- | -------------------------------------------------- | ------------------------------------------------- |
+// | Purpose       | Initializes and allocates built-in reference types | Allocates memory for any type and returns pointer |
+// | Return type   | **Initialized value** (not pointer)                | **Pointer** to zero value                         |
+// | Used with     | Only for **slice, map, channel**                   | For **any type** (structs, arrays, basic types)   |
+// | Memory alloc? | Yes                                                | Yes                                               |
+// | Zero value?   | Not just zeroed — also initialized for use         | Only zeroed memory, **not initialized** for use   |

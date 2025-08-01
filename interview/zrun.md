@@ -75,7 +75,10 @@
  two_sum_arr_1.go
  ./run.sh interview/ 25
 
- zmain.go
+ vote_poll_1.go
  ./run.sh interview/ 26
+
+ zmain.go
+ ./run.sh interview/ 27
 
 */
