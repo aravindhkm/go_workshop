@@ -24,7 +24,7 @@ func (d *ServiceItr) Status() {
 	fmt.Println("Service Running Successfully")
 }
 
-func ItrFour() {
+func ItrTypeAssign() {
 	dbItrOne := &DbItr{}
 	podItrOne := &PodItr{}
 	serviceItrOne := &ServiceItr{}

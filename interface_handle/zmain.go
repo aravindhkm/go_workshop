@@ -7,14 +7,14 @@ import (
 
 var funcNames = []func(){
 	InterfaceBasicExample,
-	InterfaceFind,
+	InterfaceEmbed,
 	ItrFive,
-	ItrFour,
+	ItrNil,
 	ItrOne,
 	ItrOwnWork,
 	ItrSix,
 	ItrThree,
-	ItrTwo,
+	ItrTypeAssign,
 	ItrTypeFind,
 }
 

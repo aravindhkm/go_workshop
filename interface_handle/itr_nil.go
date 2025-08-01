@@ -18,7 +18,7 @@ func (i SomeImpl) Get() string{
 	return i.Name
 }
 
-func ItrTwo() {
+func ItrNil() {
 	var aType SomeType
 	if aType == nil {
 		fmt.Println("nil interface", &aType)
@@ -43,9 +43,13 @@ func ItrTwo() {
 
 }
 
-// In golang, an interface is a type that specifies a set of method signatures. When a value is assigned to an interface, golang constructs an interface value that consists of two parts: the dynamic type and the dynamic value. This is commonly referred to as the “interface tuple.”
+// In golang, an interface is a type that specifies a set of method signatures. 
+// When a value is assigned to an interface, golang constructs an interface value 
+// that consists of two parts: the dynamic type and the dynamic value. This is 
+// commonly referred to as the “interface tuple.”
 
-// Dynamic Type: This is a pointer to a type descriptor that describes the type of the concrete value stored in the interface.
+// Dynamic Type: This is a pointer to a type descriptor that describes the type 
+// of the concrete value stored in the interface.
 // Dynamic Value: This is a pointer to the actual value that the interface holds.
 
 
@@ -62,16 +66,24 @@ func ItrTwo() {
 //     fun   [1]uintptr  // variable sized, actually [n]uintptr
 // }
 
-// tab: A pointer to an itab structure that contains information about the type and the methods that the type implements for the interface.
+// tab: A pointer to an itab structure that contains information about the type and 
+// the methods that the type implements for the interface.
 // data: A pointer to the actual data held by the interface.
-// When a value is assigned to an interface, golang finds the type descriptor for the concrete type being assigned to the interface. Then sets up the method table (itab) that allows method calls through the interface to be dispatched to the correct implementation and finally stores a pointer to the actual value in the data field of the interface.
+// When a value is assigned to an interface, golang finds the type descriptor for the 
+// concrete type being assigned to the interface. Then sets up the method table (itab) 
+// that allows method calls through the interface to be dispatched to the correct 
+// implementation and finally stores a pointer to the actual value in the data field 
+// of the interface.
 
 // When aType = aImpl is executed
 
-// Determining Interface Implementation: golang first determines that *SomeImpl (a pointer to SomeImpl) implements the SomeType interface because *SomeImpl has a method Get() with the correct signature.
+// Determining Interface Implementation: golang first determines that *SomeImpl (a pointer 
+// to SomeImpl) implements the SomeType interface because *SomeImpl has a method Get() 
+// with the correct signature.
 // Looking Up the Type Descriptor: golang looks up the type descriptor for *SomeImpl.
 // Creating the itab: golang creates an itab structure
-// Assigning the Pointer: golang assigns the pointer to the SomeImpl value to the data field of the interface.
+// Assigning the Pointer: golang assigns the pointer to the SomeImpl value to the 
+// data field of the interface.
 
 
 // interface (aType)
