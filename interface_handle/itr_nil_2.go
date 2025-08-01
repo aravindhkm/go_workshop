@@ -15,6 +15,14 @@ func doSomething(i interface{}) {
 func ItrNilTwo() {
 	doSomething(nil) // Output: Received nil interface
 
+	var d []int
+	fmt.Println("Check Nil ---->", d == nil)
+	doSomething(d) // Output: Interface is not nil!
+
 	var m *MyStruct = nil
-	doSomething(m)
+	fmt.Println("Check Nil ---->", m == nil)
+	doSomething(m) // Output: Interface is not nil!
+	// If you pass a typed nil (e.g., a *MyStruct that is nil),
+	// then the interface itself is not nil, because it holds a type.
+
 }

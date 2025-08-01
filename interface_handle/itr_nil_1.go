@@ -18,7 +18,7 @@ func (i SomeImpl) Get() string{
 	return i.Name
 }
 
-func ItrNil() {
+func ItrNilOne() {
 	var aType SomeType
 	if aType == nil {
 		fmt.Println("nil interface", &aType)
