@@ -6,7 +6,7 @@ func printSlice(s []int) {
 	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
 }
 
-func SliceExampleOne(){
+func SliceExampleOne() {
 	s := []int{2, 3, 5, 7, 11, 13}
 	printSlice(s)
 
@@ -27,6 +27,7 @@ func SliceExampleTwo() {
 	s := []int{}
 
 	printSlice(s)
+
 	s = append(s, 1)
 	printSlice(s)
 
@@ -38,7 +39,6 @@ func SliceExampleTwo() {
 }
 
 func SliceAndCap() {
-	SliceExampleOne()
-	// SliceExampleTwo()
+	// SliceExampleOne()
+	SliceExampleTwo()
 }
-

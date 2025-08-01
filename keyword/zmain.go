@@ -10,6 +10,7 @@ var funcNames = []func(){
 	ReferenceOrValue,
 	ArrayTest,
 	ByteOne,
+	CapOne,
 	Copy_A,
 	Copy_B,
 	Copy_C,
