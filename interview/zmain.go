@@ -31,6 +31,7 @@ var funcNames = []func(){
 	SignalTwo,
 	SqrtSort,
 	TwoSumArrOne,
+	VotePollOne,
 }
 
 // Run executes a function by key from the store

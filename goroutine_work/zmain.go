@@ -6,6 +6,7 @@ import (
 )
 
 var funcNames = []func(){
+	ChanCloseOne,
 	ChanExOne,
 	ChanExTwo,
 	CloseChOne,
