@@ -19,7 +19,7 @@ var funcNames = []func(){
 // Run executes a function by key from the store
 func Run(funcName string) {
 	currDir := "./context_example"
-	runKey, err := config.FindFuncKey(currDir, funcName)
+	runKey, err := config.FindRunIndex(currDir, funcName)
 
 	if err != nil {
 		fmt.Printf("Error in %s: %s\n", currDir, err.Error())
@@ -28,9 +28,8 @@ func Run(funcName string) {
 	fn()
 }
 
-
-// The context package in Go provides a way to carry deadlines, 
-// cancellation signals, and request-scoped values across API boundaries 
+// The context package in Go provides a way to carry deadlines,
+// cancellation signals, and request-scoped values across API boundaries
 // and between goroutines.
 
 // It’s mainly used to:

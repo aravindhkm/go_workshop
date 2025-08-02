@@ -27,7 +27,7 @@ var funcNames = []func(){
 // Run executes a function by key from the store
 func Run(funcName string) {
 	currDir := "./concurrency"
-	runKey, err := config.FindFuncKey(currDir, funcName)
+	runKey, err := config.FindRunIndex(currDir, funcName)
 
 	if err != nil {
 		fmt.Printf("Error in %s: %s\n", currDir, err.Error())

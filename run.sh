@@ -15,8 +15,16 @@ clear
 # Add a few empty lines after the clear command
 echo -e "\n"
 
+ARGS="$1"
+INDEX="$2"
+
+# Check if NAME contains a slash (text/text format)
+if [[ "$ARGS" == */* ]]; then
+  ARGS="$ARGS/"
+fi
+
 # Run the Go program with all provided arguments
-go run main.go "$@"
+go run main.go --args="$ARGS" --index="$INDEX"
 
 # Add a few more empty lines after the output
 # echo -e "\n"

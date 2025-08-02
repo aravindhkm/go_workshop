@@ -11,6 +11,7 @@ import (
 
 type Config struct {
 	ApikeyGR  string `json:"APIKEY_GR"`
+	IsIndex   bool   `json:isIndex`
 	IsReverse bool   `json:"isReverse"`
 }
 
@@ -38,7 +39,11 @@ func SetReverse(status bool) {
 	AppConfig.IsReverse = status
 }
 
-func FindFuncKey(dirName string, funcName string) (int, error) {
+func SetIndexFilter(status bool) {
+	AppConfig.IsIndex = true
+}
+
+func findFuncKey(dirName string, funcName string) (int, error) {
 	fileCount := 0
 	entries, err := os.ReadDir(dirName)
 	if err != nil {
@@ -59,10 +64,33 @@ func FindFuncKey(dirName string, funcName string) (int, error) {
 		return 0, err
 	}
 	if AppConfig.IsReverse {
-		result = fileCount - n
+		result = fileCount - (n + 1)
 	} else {
-		result = n-1
+		result = n - 1
+	}
+	return result, nil
+}
+
+func findFileIndex(dirName string, funcName string) (int, error) {
+	entries, err := os.ReadDir(dirName)
+	if err != nil {
+		fmt.Println("Error:", err)
+		return 0, err
 	}
 
-	return result, nil
+	for index, e := range entries {
+		fmt.Println("e", index, e.Name(), e.Name() == funcName)
+		if e.Name() == funcName {
+			return index, nil
+		}
+	}
+	return 0, nil
+}
+
+func FindRunIndex(dirName string, funcName string) (int, error) {
+	if AppConfig.IsIndex {
+		return findFuncKey(dirName, funcName)
+	} else {
+		return findFileIndex(dirName, funcName)
+	}
 }

@@ -11,7 +11,7 @@ var funcNames = []func(string){
 
 func Run(funcName string) {
 	currDir := "./zexecute"
-	_, err := config.FindFuncKey(currDir, "1")
+	_, err := config.FindRunIndex(currDir, "1")
 
 	if err != nil {
 		fmt.Printf("Error in %s: %s\n", currDir, err.Error())
