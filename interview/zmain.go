@@ -21,6 +21,7 @@ var funcNames = []func(){
 	GenericChOne,
 	GenericChTwo,
 	InheritenceOne,
+	LinearOne,
 	LinkedListExec,
 	OddEvenFind,
 	Palindrome_One,
