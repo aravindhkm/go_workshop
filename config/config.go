@@ -79,8 +79,9 @@ func findFileIndex(dirName string, funcName string) (int, error) {
 	}
 
 	for index, e := range entries {
-		fmt.Println("e", index, e.Name(), e.Name() == funcName)
+		// fmt.Println("e", index, e.Name(), e.Name() == funcName)
 		if e.Name() == funcName {
+			// fmt.Println("return", index)
 			return index, nil
 		}
 	}

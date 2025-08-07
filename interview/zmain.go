@@ -23,6 +23,7 @@ var funcNames = []func(){
 	InheritenceOne,
 	LinearOne,
 	LinkedListExec,
+	MemLeakOne,
 	OddEvenFind,
 	Palindrome_One,
 	PianoOne,
