@@ -34,6 +34,7 @@ var funcNames = []func(){
 	SignalOne,
 	SignalTwo,
 	SqrtSort,
+	TripletOne,
 	TwoSumArrOne,
 	VotePollOne,
 }
