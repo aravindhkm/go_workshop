@@ -19,6 +19,7 @@ var funcNames = []func(){
 	IotaExampleOne,
 	MakeVsNewExampleOne,
 	MapKey,
+	NilOne,
 	PtrOne,
 	PtrTwo,
 	RecoverExampleOne,
