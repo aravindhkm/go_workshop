@@ -26,6 +26,7 @@ var funcNames = []func(){
 	RemoveZeroFromArray,
 	SelectFibonacciExample,
 	StackOne,
+	StrSort,
 }
 
 // Run executes a function by key from the store
