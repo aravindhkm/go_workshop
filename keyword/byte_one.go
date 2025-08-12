@@ -5,8 +5,8 @@ import "fmt"
 // bytes is a pass by reference
 
 func UpdateByte(Arg []byte) {
-	copy(Arg, []byte("Test"))
-	// 	Arg = []byte("Test")
+	// copy(Arg, []byte("Test"))
+		Arg = []byte("Test")
 }
 
 func ByteOne() {
