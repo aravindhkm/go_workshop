@@ -3,7 +3,6 @@ package utils
 import (
 	"WorkShop/api"
 	"WorkShop/concurrency"
-	contextexample "WorkShop/context_example"
 	"WorkShop/ctx"
 	errorexample "WorkShop/error_example"
 	"WorkShop/generics"
@@ -49,7 +48,7 @@ var runMap = map[string]func(string){
 	"http_handle":      httphandle.Run,
 	"task":             task.Run,
 	"problem":          problem.Run,
-	"rate_limit":        ratelimit.Run,
+	"rate_limit":       ratelimit.Run,
 	"routine":          routine.Run,
 	"interview":        interview.Run,
 	"pkg":              pkg.Run,
@@ -57,7 +56,6 @@ var runMap = map[string]func(string){
 	"tool":             tool.Run,
 	"interface_handle": interfacehandle.Run,
 	"goroutine_work":   goroutinework.Run,
-	"context_example":  contextexample.Run,
 	"worker_example":   workerexample.Run,
 	"sync_example":     syncexample.Run,
 	"zexecute":         zexecute.Run,

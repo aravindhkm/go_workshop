@@ -1,4 +1,4 @@
-package contextexample
+package ctx
 
 import (
 	"context"

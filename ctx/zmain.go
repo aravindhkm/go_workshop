@@ -6,8 +6,16 @@ import (
 )
 
 var funcNames = []func(){
+	AfterFunc_A,
 	CtxWithValueExampleOne,
 	Diff,
+	ToDo_A,
+	ToDo_B,
+	WithCancel_A,
+	WithCancel_B,
+	WithDeadline_A,
+	WithTimeout_A,
+	WithValue_A,
 }
 
 // Run executes a function by key from the store
