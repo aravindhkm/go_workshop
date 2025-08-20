@@ -29,6 +29,7 @@ var funcNames = []func(){
 	SelectOne,
 	SliceTest,
 	SliceAndCap,
+	SliceUnderLyingOne,
 	StringImmutable,
 	StructExampleOne,
 	SwapTwoNumberExecute,
