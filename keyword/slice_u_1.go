@@ -7,7 +7,7 @@ import (
 func SliceUnderLyingOne() {
 	// Create a slice with values 0 to 9.
 	// Backed by an underlying array of size 10.
-	slice := []int{1, 2, 3, 4, 5,6,7,8,9}
+	slice := []int{0, 1, 2, 3, 4, 5,6,7,8}
 	fmt.Println("Initial slice:", slice, "len:", len(slice), "cap:", cap(slice))
 
 	// Take a subslice of the first 5 elements (indexes 0..4).
